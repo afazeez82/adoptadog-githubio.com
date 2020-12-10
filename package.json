@@ -1,36 +1,47 @@
 {
-  "name": "mern-mysql-passport-mcv",
+  "name": "FurEverRescue",
   "version": "1.0.0",
-  "description": "Bootstrap MERN application with Passport authentication - MySQL database",
+  "description": "Bootcamp Project 3",
   "main": "server.js",
-  "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "client": "cd client && npm run start",
-    "seed": "node scripts/seedDB.js",
-    "install": "cd client && yarn install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
-  },
   "dependencies": {
-    "axios": "^0.18.0",
-    "bcrypt-nodejs": "^0.0.3",
-    "body-parser": "^1.18.3",
-    "express": "^4.15.4",
-    "express-session": "^1.15.6",
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "if-env": "^1.0.4",
-    "mysql2": "^1.6.1",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.2.5",
     "path": "^0.12.7",
+    "react-redux": "^7.2.2",
     "react-router-dom": "^4.3.1",
-    "sequelize": "^4.39.0"
-  }
+    "redux": "^4.0.5",
+    "sequelize": "^6.3.5",
+    "client": "file:client"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",    "server": "nodemon server",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"", 
+    "client": "npm start --prefix client",
+    "seed": "node scripts/seedDB.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afazeez82/adoptadog-githubio.com.git"
+  },
+  "keywords": [
+    "MERN"
+  ],
+  "author": "Group Quetzal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afazeez82/adoptadog-githubio.com/issues"
+  },
+  "homepage": "https://github.com/afazeez82/adoptadog-githubio.com#readme"
 }

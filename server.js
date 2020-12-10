@@ -5,7 +5,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const session = require("express-session");
-const passport = require("passport");
 const db = require("./models");
 const routes = require("./routes");
 
@@ -24,20 +23,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// ==============================================================================
-// Passport
-// ==============================================================================
-
-app.use(
-  session({
-    secret: "ur-secret-key",
-    resave: true,
-    saveUninitialized: true
-  })
-);
-
-app.use(passport.initialize());
-app.use(passport.session());
 
 // ==============================================================================
 // Routing (API and React Views)
@@ -45,11 +30,6 @@ app.use(passport.session());
 
 app.use(routes);
 
-// ==============================================================================
-// Initialize Passport Strategy
-// ==============================================================================
-
-require("./config/passport")(passport, db.User);
 
 // ==============================================================================
 // Database Sync Options
