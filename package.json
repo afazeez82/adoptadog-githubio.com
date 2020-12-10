@@ -24,7 +24,8 @@
     "nodemon": "^2.0.6"
   },
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",    "server": "nodemon server",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",    
+    "server": "nodemon server",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"", 
     "client": "npm start --prefix client",
