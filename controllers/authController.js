@@ -1,35 +1,43 @@
-// ==============================================================================
 // Dependencies & Required Files
-// ==============================================================================
+const db = require("../models");
+const User = db.user;
+const Adopter = db.adopter;
+const Dog = db.dog;
+const Op = db.Sequelize.Op;
 
-// ==============================================================================
+/*CRUD functions:
+
+    create
+    findAll
+    findOne
+    update
+    delete
+*/
+
 // AuthController Methods
-// ==============================================================================
 
-module.exports = {
-  signup: (req, res) => {
-    console.log("signed up", req.user);
-    const userInfo = {
-      username: req.user.username,
-      id: req.user.id
-    };
-    res.send(userInfo);
-  },
-  login: (req, res) => {
-    console.log("logged in", req.user);
-    const userInfo = {
-      username: req.user.username,
-      id: req.user.id
-    };
-    res.send(userInfo);
-  },
-  logout: (req, res) => {
-    if (req.user) {
-      req.session.destroy(err => {
-        res.json({ message: "user has been logged out" });
-      });
-    } else {
-      res.send({ message: "no user to logout" });
-    }
-  }
+
+// Create and Save a new Dog
+exports.create = (req, res) => {
+  
+};
+
+// Retrieve all Dogs from the database for the Adopt Page.
+exports.findAll = (req, res) => {
+  
+};
+
+// Find a single Dog with an id for the Profile Page
+exports.findOne = (req, res) => {
+  
+};
+
+// Update a Dogs Profile using its id in the request
+exports.update = (req, res) => {
+  
+};
+
+// Delete a Dog's Profile with the specified id in the request
+exports.delete = (req, res) => {
+  
 };
