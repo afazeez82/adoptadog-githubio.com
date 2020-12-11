@@ -5,11 +5,11 @@
 module.exports = (sequelize, DataTypes) => {
   const dog = sequelize.define("Dog", {
   
-    name: {
+    dogName: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    age: {
+    dogAge: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    breed: {
+    dogBreed: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -40,5 +40,8 @@ module.exports = (sequelize, DataTypes) => {
 
   });
 
+  dog.associate = function(models) {
+    dog.hasMany(models.adopter);
+  };
   return dog;
 };
