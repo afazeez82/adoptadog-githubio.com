@@ -2,9 +2,8 @@
 // Establish & Export the User Model
 // ==============================================================================
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = function (sequelize, DataTypes)  {
   const dog = sequelize.define("Dog", {
-  
     dogName: {
       type: DataTypes.STRING,
       allowNull: false
@@ -37,11 +36,13 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     }
-
   });
-
   dog.associate = function(models) {
-    dog.hasMany(models.adopter);
+    dog.belongsTo(models.adopter, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
   return dog;
 };

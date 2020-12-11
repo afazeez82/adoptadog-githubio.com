@@ -6,6 +6,7 @@ exports.create = (req, res) => {
 	// Save to MySQL database
 	Dog.create({  
 	  dogName: req.body.dogName,
+	  dogImage: req.body.dogImage,
 	  gender: req.body.gender,
       dogBreed: req.body.dogBreed,
       coatLength: req.body.coatLength,

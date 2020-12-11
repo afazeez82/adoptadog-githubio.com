@@ -2,9 +2,8 @@
 // Establish & Export the User Model
 // ==============================================================================
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = function (sequelize, DataTypes)  {
   const adopter = sequelize.define("Adopter", {
-  
     contactName: {
       type: DataTypes.STRING,
       allowNull: false
@@ -22,6 +21,9 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     }
   });
-
+  adopter.associate = function(models) {
+   adopter.hasMany(models.dog, {
+});
+  };
   return adopter;
 };
