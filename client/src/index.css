@@ -2,8 +2,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #F7D5AE;
 }
 
 nav {
   background-color: #f0b02a;
 }
+
+/* .donate {
+  background-image: url(
+} */
