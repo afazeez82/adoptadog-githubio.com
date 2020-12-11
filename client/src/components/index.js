@@ -1,5 +1,9 @@
-  
 export { default as Navigation } from "./Navigation";
 export { default as Footer } from "./Footer";
 export { default as Home } from "./Home";
 export { default as About } from "./About";
+export { default as Adopt } from "./Adopt";
+export { default as Blog } from "./Blog";
+export { default as Volunteer } from "./getInvolved";
+export { default as Donate } from "./Donate";
+export { default as Login } from "./Login";
