@@ -4,10 +4,10 @@ import { Link, withRouter } from "react-router-dom";
 function Navigation(props) {
   return (
     <div className="navigation">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <Link class="navbar-brand" to="/">
-            React Multi-Page Website
+            FurEver Home Rescue
           </Link>
           <button
             class="navbar-toggler"
@@ -23,9 +23,8 @@ function Navigation(props) {
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li
-                class={`nav-item  ${
-                  props.location.pathname === "/" ? "active" : ""
-                }`}
+                class={`nav-item  ${props.location.pathname === "/" ? "active" : ""
+                  }`}
               >
                 <Link class="nav-link" to="/">
                   Home
@@ -33,21 +32,51 @@ function Navigation(props) {
                 </Link>
               </li>
               <li
-                class={`nav-item  ${
-                  props.location.pathname === "/about" ? "active" : ""
-                }`}
+                class={`nav-item  ${props.location.pathname === "/adopt" ? "active" : ""
+                  }`}
+              >
+                <Link class="nav-link" to="/adopt">
+                  Adopt
+                </Link>
+              </li>
+              <li
+                class={`nav-item  ${props.location.pathname === "/donate" ? "active" : ""
+                  }`}
+              >
+                <Link class="nav-link" to="/donate">
+                  Donate
+                </Link>
+              </li>
+              <li
+                class={`nav-item  ${props.location.pathname === "/getInvolved" ? "active" : ""
+                  }`}
+              >
+                <Link class="nav-link" to="/getInvolved">
+                  Get Involved
+                </Link>
+              </li>
+              <li
+                class={`nav-item  ${props.location.pathname === "/about" ? "active" : ""
+                  }`}
               >
                 <Link class="nav-link" to="/about">
                   About
                 </Link>
               </li>
               <li
-                class={`nav-item  ${
-                  props.location.pathname === "/contact" ? "active" : ""
-                }`}
+                class={`nav-item  ${props.location.pathname === "/blog" ? "active" : ""
+                  }`}
               >
-                <Link class="nav-link" to="/contact">
-                  Contact
+                <Link class="nav-link" to="/blog">
+                  Blog
+                </Link>
+              </li>
+              <li
+                class={`nav-item  ${props.location.pathname === "/login" ? "active" : ""
+                  }`}
+              >
+                <Link class="nav-link" to="/login">
+                  Login
                 </Link>
               </li>
             </ul>
