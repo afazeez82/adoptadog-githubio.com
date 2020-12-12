@@ -2,10 +2,10 @@
 module.exports = function (sequelize, DataTypes)  {
   const adopter = sequelize.define("adopter", {
 
-    user: {
-      type: sequelize.Schema.Types.ObjectId,
-      ref: 'user'
-    },
+    // user: {
+    //   type: sequelize.Schema.Types.ObjectId,
+    //   ref: 'user'
+    // },
     contactName: {
       type: DataTypes.STRING,
       allowNull: false
