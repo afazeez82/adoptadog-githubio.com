@@ -3,7 +3,7 @@
 // ==============================================================================
 
 module.exports = function (sequelize, DataTypes)  {
-  const adopter = sequelize.define("Adopter", {
+  const adopter = sequelize.define("adopter", {
     contactName: {
       type: DataTypes.STRING,
       allowNull: false
@@ -21,9 +21,9 @@ module.exports = function (sequelize, DataTypes)  {
       allowNull: false
     }
   });
-  adopter.associate = function(models) {
-   adopter.hasMany(models.dog, {
-});
-  };
+//   adopter.associate = function(models) {
+//    adopter.hasMany(models.dog, {
+// });
+//   };
   return adopter;
 };

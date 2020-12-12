@@ -3,14 +3,16 @@
 // ==============================================================================
 
 module.exports = function (sequelize, DataTypes)  {
-  const dog = sequelize.define("Dog", {
+  const dog = sequelize.define("dog", {
     dogName: {
       type: DataTypes.STRING,
       allowNull: false
+      
     },
-    dogImage: {
+    dogImageUrl: {
       type: DataTypes.STRING,
       allowNull: false
+  
     },
     dogAge: {
       type: DataTypes.STRING,
@@ -41,12 +43,12 @@ module.exports = function (sequelize, DataTypes)  {
       allowNull: false
     }
   });
-  dog.associate = function(models) {
-    dog.belongsTo(models.adopter, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
+  // dog.associate = function(models) {
+  //   dog.belongsTo(models.adopter, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
   return dog;
 };

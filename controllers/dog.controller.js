@@ -2,7 +2,7 @@ const db = require('../config/db.config.js');
 const Dog = db.dogs;
 
 // Post a Dog
-exports.create = (req, res) => {	
+export const create = (req, res) => {	
 	// Save to MySQL database
 	Dog.create({  
 	  dogName: req.body.dogName,
@@ -15,7 +15,7 @@ exports.create = (req, res) => {
       briefBio: req.body.briefBio
 	}).then(dog => {		
 		// Send created Dog to client
-		res.send(dog);
+		res.json(dog);
 	});
 };
  
