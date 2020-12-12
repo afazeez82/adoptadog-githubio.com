@@ -1,15 +1,15 @@
 
 module.exports = function (sequelize, DataTypes)  {
   const dog = sequelize.define("dog", {
-    name: {
+    dogName: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    image: {
+    dogImage: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    age: {
+    dogAge: {
       type: DataTypes.STRING,
       allowNull: false
     },
