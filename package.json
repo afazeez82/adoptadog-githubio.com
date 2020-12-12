@@ -1,5 +1,5 @@
 {
-  "name": "FurEverRescue",
+  "name": "furever-rescue",
   "version": "1.0.0",
   "description": "Bootcamp Project 3",
   "main": "server.js",
@@ -30,7 +30,6 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "npm start --prefix client",
-    "seed": "node scripts/seedDB.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
