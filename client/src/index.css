@@ -8,6 +8,24 @@ body {
 nav {
   background-color: #f0b02a;
 }
+.img-fluid{
+  width: 500px;
+  height: 500px;
+}
+
+.img-circle {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.btn-primary {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+  border-radius: 50%;
+}
 
 /* .donate {
   background-image: url(
