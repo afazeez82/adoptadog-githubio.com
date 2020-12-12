@@ -14,8 +14,8 @@ module.exports = function (router) {
     // Retrieve all dogs by breed
     router.get('api/dogs/:dogBreed', dogs.findBydogBreed);
 
-    // Retrieve all dogs by age
-    router.get('api/dogs/:age', dogs.findByage);
+    // Retrieve all dogs by dogAge
+    router.get('api/dogs/:dogAge', dogs.findBydogAge);
 
     // Retrieve all dogs by activityLevel
     router.get('api/dogs/:activityLevel', dogs.findByactivityLevel);
