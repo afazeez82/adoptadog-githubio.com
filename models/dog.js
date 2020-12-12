@@ -8,6 +8,10 @@ module.exports = function (sequelize, DataTypes)  {
       type: DataTypes.STRING,
       allowNull: false
     },
+    dogImage: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     dogAge: {
       type: DataTypes.STRING,
       allowNull: false
