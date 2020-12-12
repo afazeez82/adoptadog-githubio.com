@@ -22,13 +22,13 @@ function Home() {
               type and scrambled it to make a type specimen book.
             </p>
             <div className="col-md-4"></div>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#donate">ADOPT</a>
+            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#adopt">ADOPT</a>
             <img src={process.env.PUBLIC_URL +"/images/cute-dog.jpeg"} className="img-circle" alt="..."></img>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#blog">DONATE</a>
+            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#donate">DONATE</a>
             <img src={process.env.PUBLIC_URL +"/images/dog2.jpg"} className="img-circle" alt="..."></img>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#donate">BLOG</a>
+            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#blog">BLOG</a>
             <img src={process.env.PUBLIC_URL +"/images/DOG3.jpg"} className="img-circle" alt="..."></img>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#blog">ABOUT</a>
+            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">ABOUT</a>
             <img src={process.env.PUBLIC_URL +"/images/DOG4.jpg"} className="img-circle" alt="..."></img>
           </div>
           </div>
