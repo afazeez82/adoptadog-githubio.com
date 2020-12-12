@@ -1,5 +1,9 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import LoginButton from './LoginButton'
+import LogoutButton from './LogoutButton'
+//import Auth from '../utils/auth'
+
 
 function Navigation(props) {
   return (
@@ -71,14 +75,8 @@ function Navigation(props) {
                   Blog
                 </Link>
               </li>
-              <li
-                class={`nav-item  ${props.location.pathname === "/login" ? "active" : ""
-                  }`}
-              >
-                <Link class="nav-link" to="/login">
-                  Login
-                </Link>
-              </li>
+              <LoginButton />
+              <LogoutButton />
             </ul>
           </div>
         </div>

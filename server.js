@@ -13,7 +13,7 @@ const routes = require("./routes");
 // ==============================================================================
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -24,11 +24,12 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-// ==============================================================================
 // Routing (API and React Views)
-// ==============================================================================
 
-app.use(routes);
+app.use('/api/auth', require('routes/api/auth'));
+app.use('/api/users', require('routes/api/users'));
+app.use('/api/adopters', require('routes/api/adopters'));
+app.use('/api/dogs', require('routes/api/dogs'));
 
 
 // ==============================================================================

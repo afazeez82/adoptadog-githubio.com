@@ -1,9 +1,7 @@
-// ==============================================================================
-// Establish & Export the User Model
-// ==============================================================================
 
 module.exports = function (sequelize, DataTypes)  {
   const dog = sequelize.define("Dog", {
+<<<<<<< Updated upstream
     dogName: {
       type: DataTypes.STRING,
       allowNull: false
@@ -13,6 +11,17 @@ module.exports = function (sequelize, DataTypes)  {
       allowNull: false
     },
     dogAge: {
+=======
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    age: {
+>>>>>>> Stashed changes
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -39,6 +48,10 @@ module.exports = function (sequelize, DataTypes)  {
     briefBio: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    favorite: {
+      type: Boolean,
+      default: false
     }
   });
   dog.associate = function(models) {
