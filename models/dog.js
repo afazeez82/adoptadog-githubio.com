@@ -1,17 +1,6 @@
 
 module.exports = function (sequelize, DataTypes)  {
-  const dog = sequelize.define("Dog", {
-<<<<<<< Updated upstream
-    dogName: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    dogImage: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    dogAge: {
-=======
+  const dog = sequelize.define("dog", {
     name: {
       type: DataTypes.STRING,
       allowNull: false
@@ -21,7 +10,6 @@ module.exports = function (sequelize, DataTypes)  {
       allowNull: false
     },
     age: {
->>>>>>> Stashed changes
       type: DataTypes.STRING,
       allowNull: false
     },
