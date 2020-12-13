@@ -1,15 +1,15 @@
 USE adoptAdogDB;
 
 CREATE TABLE dog (
-    dogName VARCHAR(255),
-    dogImage VARCHAR(255),
-    dogAge VARCHAR(255),
-    gender VARCHAR(255),
-    dogBreed VARCHAR(255),
-    coatLength VARCHAR(255),
-    activityLevel VARCHAR(255),
-    specialNeeds VARCHAR(255),
-    briefBio VARCHAR(255),
+    dogName  VARCHAR(255),
+    dogImage  VARCHAR(255),
+    dogAge  VARCHAR(255),
+    gender  VARCHAR(255),
+    dogBreed  VARCHAR(255),
+    coatLength  VARCHAR(255),
+    activityLevel  VARCHAR(255),
+    specialNeeds  VARCHAR(255),
+    briefBio  VARCHAR(255),
     favorite BOOLEAN
 );
 
@@ -112,3 +112,30 @@ VALUES ('Thor',
         'Yes',
         'His owner passed away and he has been transferred to multiple shelters.',
         false);
+
+CREATE TABLE adopter (
+        dogName  VARCHAR(255),
+        currentDate DATE,
+        contactName VARCHAR(255),
+        address VARCHAR(255),
+        city VARCHAR(255),
+        state VARCHAR(255),
+        zip INTEGER,
+        phoneNumber VARCHAR(255),
+        altPhone VARCHAR(255),
+        email VARCHAR(255),
+        individualsResiding TEXT,
+        agreement BOOLEAN,
+        ownRent TINYINT,
+        landlord VARCHAR(255),
+        homeDescription TEXT,
+        experience TEXT,
+        petSurrender BOOLEAN,
+        currentPetDescription TEXT,
+        hoursAlone INTEGER,
+        hoursTogether INTEGER,
+        dogKept VARCHAR(255),
+        dogSleep VARCHAR(255),
+        dogTraining VARCHAR(255),
+        vet VARCHAR(255)
+);   
