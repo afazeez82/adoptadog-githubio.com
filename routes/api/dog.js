@@ -1,41 +1,84 @@
 
-const dog = require('/controllers/dogController');
 module.exports = function (router) {
-
-  
-
     // Create a new Dog
-    router.post('/api/dog', dog.create);
+    router.post("/api/dog", (req, res) => {
+        db.dog.create({
+                dogName: req.body.dogName,
+                dogImage: req.body.dogImage,
+                gender: req.body.gender,
+                dogBreed: req.body.dogBreed,
+                coatLength: req.body.coatLength,
+                ctivityLevel: req.body.activityLevel,
+                specialNeed: req.body.specialNeed,
+                briefBio: req.body.briefBio
+            })
+            .then(function(dog) {
+                res.json(dog);
+            })
+            .catch(function(err) {
+                res.status(500).json(err);
+            });
+    });
 
-    // Retrieve all Dog
-    router.get('/api/dog', dog.findAll);
+     // Retrieve all Dog
+     router.get("/api/dog", (req, res) => {
+        db.dog.findAll({}).then(function(dbGetDog) {
+                res.json(dbGetDog);
+            })
+            .catch(function(err) {
+                res.status(500).json(err);
+            });
+    });
+     // Retrieve a single Dog by Id
+     router.get("/api/dog/:id", (req, res) => {
+        db.dog.findOne({
+                where: {
+                    id: req.params.id
+                }
+            }).then(function(dbGetDog) {
+                res.json(dbGetDog );
+            })
+            .catch(function(err) {
+                res.status(500).json(err);
+            });
+    });
 
-    // Retrieve a single Dog by Id
-    router.get('/api/dog/:dogId', dog.findById);
+    // Delete a Dog with Id
+    router.delete("/api/dog/:id", (req, res) => {
+        db.dog.destroy({
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(function(dbDeleteDog) {
+                res.json(dbDeleteDog);
+            })
+            .catch(function(err) {
+                res.status(500).json(err);
+            });
+    });
 
-    // Retrieve all dogs by breed
-    router.get('api/dog/:dogBreed', dog.findBydogBreed);
+      // Update a Dog with Id
+      router.post("/api/dog/:id", (req, res) => {
+        db.dog.update({
+                dogName: req.body.dogName,
+                gender: req.body.gender,
+                dogBreed: req.body.dogBreed,
+                coatLength: req.body.coatLength,
+                activityLevel: req.body.activityLevel,
+                specialNeed: req.body.specialNeed,
+                briefBio: req.body.briefBio,
+                updatedAt: Date.now(),
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            }).then(function(dbUpdateDog) {
+                res.json(dbUpdateDog);
+            })
+            .catch(function(err) {
+                res.status(500).json(err);
+            });
+    });
 
-    // Retrieve all dogs by dogAge
-    router.get('api/dog/:dogAge', dog.findBydogAge);
-
-    // Retrieve all dogs by activityLevel
-    router.get('api/dog/:activityLevel', dog.findByactivityLevel);
-
-    // Retrieve all dogs by coatLength
-    router.get('api/dog/:coatLength', dog.findBycoatLength);
-
-
-    // Retrieve all dogs by specialNeeds
-    router.get('api/dog/:specialNeeds', dog.findByspecialNeeds);
-
-    // Retrieve all dogs by favorite
-    router.get('api/dog/:favorite', dog.findByfavorite);
-
-
-    // Update a Dog with Id
-    router.put('/api/dog/:dogId', dog.update);
-
-    // Delete a Customer with Id
-    router.delete('/api/dog/:dogId', dog.delete);
 }
