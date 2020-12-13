@@ -4,36 +4,36 @@ import React from "react";
 function Home() {
   return (
     <div className="home">
-      <div className="container">
-        <div className="row align-items-center my-5">
-          <div className="col-lg-7">
-            <img
-              className="img-fluid w-100 "
-              src={process.env.PUBLIC_URL +"/images/dogs1.jpg"}
-              alt=""
-            />
-          </div>
-          <div className="col-lg-5">
-            <h1 className="font-weight-light">Home</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-            <div className="col-md-4"></div>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#adopt">ADOPT</a>
-            <img src={process.env.PUBLIC_URL +"/images/cute-dog.jpeg"} className="img-circle" alt="..."></img>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#donate">DONATE</a>
-            <img src={process.env.PUBLIC_URL +"/images/dog2.jpg"} className="img-circle" alt="..."></img>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#blog">BLOG</a>
-            <img src={process.env.PUBLIC_URL +"/images/DOG3.jpg"} className="img-circle" alt="..."></img>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">ABOUT</a>
-            <img src={process.env.PUBLIC_URL +"/images/DOG4.jpg"} className="img-circle" alt="..."></img>
-          </div>
-          </div>
-          </div>
-        </div>
+      <div className="row">
+        <img
+          src={process.env.PUBLIC_URL + "/images/pittyswim.jpg"}
+          alt=""
+        />
+      </div>
+      <div className="row justify-content-md-center" style={{ backgroundColor: "#004179", height: "400px" }}>
+        <button className="homeBTN p-3">
+          <p style={{ color: "#CACACA" }}>ADOPT</p>
+          <img src={process.env.PUBLIC_URL + "/images/dogs1.jpg"} alt="my" className="img-circle m-4" />
+        </button>
+
+
+        <button className="homeBTN p-3">
+          <p style={{ color: "#CACACA" }}>DONATE</p>
+          <img src={process.env.PUBLIC_URL + "/images/dog2.jpg"} className="img-circle m-4" alt="..." />
+        </button>
+
+        <button className="homeBTN p-3">
+          <p style={{ color: "#CACACA" }}>BLOG</p>
+          <img src={process.env.PUBLIC_URL + "/images/dog3.jpg"} className="img-circle m-4" alt="..." />
+        </button>
+
+
+        <button className="homeBTN p-3">
+          <p style={{ color: "#CACACA" }}>ABOUT</p>
+          <img src={process.env.PUBLIC_URL + "/images/DOG4.jpg"} className="img-circle m-4" alt="..."></img>
+        </button>
+      </div>
+    </div>
   );
 }
 

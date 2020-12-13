@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Jalicaserver_2020",
-    "database": "adoptadogdb",
+    "password": "password",
+    "database": "adoptAdogDB",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "port": 3306
