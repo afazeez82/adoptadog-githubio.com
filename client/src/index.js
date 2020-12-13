@@ -5,7 +5,7 @@ import App from "./App";
 import { Auth0Provider } from '@auth0/auth0-react';
 //import Auth0ProviderWithHistory from '../src/utils/history';
 
-import reportWebVitals from './utils/reportWebVitals';
+import reportWebVitals from './reportWebVitals';
 
 //import registerServiceWorker from "./utils/registerServiceWorker";
 
