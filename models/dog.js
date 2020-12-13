@@ -39,8 +39,8 @@ module.exports = function (sequelize, DataTypes)  {
       allowNull: false
     },
     // favorite: {
-    //   type: Boolean,
-    //   default: false
+    //   type: DataTypes.STRING,
+    //   allowNull: false
     // }
   });
   dog.associate = function(models) {
@@ -51,4 +51,4 @@ module.exports = function (sequelize, DataTypes)  {
     });
   };
   return dog;
-};
+};   
