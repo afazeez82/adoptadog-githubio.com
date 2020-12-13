@@ -1,6 +1,7 @@
 
 module.exports = function (sequelize, DataTypes)  {
   const dog = sequelize.define("dog", {
+
     dogName: {
       type: DataTypes.STRING,
       allowNull: false
@@ -37,16 +38,16 @@ module.exports = function (sequelize, DataTypes)  {
       type: DataTypes.STRING,
       allowNull: false
     },
-    favorite: {
-      type: Boolean,
-      default: false
-    }
+    // favorite: {
+    //   type: Boolean,
+    //   default: false
+    // }
   });
   dog.associate = function(models) {
     dog.belongsTo(models.adopter, {
       foreignKey: {
         allowNull: false
-      }
+      },
     });
   };
   return dog;
