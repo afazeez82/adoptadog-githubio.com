@@ -5,12 +5,13 @@ import App from "./App";
 import { Auth0Provider } from '@auth0/auth0-react';
 //import Auth0ProviderWithHistory from '../src/utils/history';
 
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './utils/reportWebVitals';
 
-//import registerServiceWorker from "./registerServiceWorker";
+//import registerServiceWorker from "./utils/registerServiceWorker";
 
-const domain = process.env.REACT_APP_AUTH0_DOMAIN;
-const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+const domain = 'dev-lutymdw4.us.auth0.com';
+const clientId = 'qIWYpebqurDMzXmGh14Da9m2fw420fcr'
+;
 
 
 ReactDOM.render(
