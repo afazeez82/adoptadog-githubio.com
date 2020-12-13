@@ -1,4 +1,4 @@
-
+const db = require("../../models");
 module.exports = function (router) {
     // Create a new Dog
     router.post("/api/dog", (req, res) => {
@@ -8,7 +8,7 @@ module.exports = function (router) {
                 gender: req.body.gender,
                 dogBreed: req.body.dogBreed,
                 coatLength: req.body.coatLength,
-                ctivityLevel: req.body.activityLevel,
+                activityLevel: req.body.activityLevel,
                 specialNeed: req.body.specialNeed,
                 briefBio: req.body.briefBio
             })
@@ -30,6 +30,7 @@ module.exports = function (router) {
             });
     });
      // Retrieve a single Dog by Id
+
      router.get("/api/dog/:id", (req, res) => {
         db.dog.findOne({
                 where: {
