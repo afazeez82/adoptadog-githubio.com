@@ -1,6 +1,6 @@
 USE adoptAdogDB;
 
-CREATE TABLE dog (
+CREATE TABLE dogs (
     dogName  VARCHAR(255),
     dogImage  VARCHAR(255),
     dogAge  VARCHAR(255),
@@ -13,7 +13,7 @@ CREATE TABLE dog (
     favorite BOOLEAN
 );
 
-INSERT INTO dog (dogName,dogImage,dogAge,gender,dogBreed,coatLength,activityLevel,specialNeeds,briefBio,favorite) 
+INSERT INTO dogs (dogName,dogImage,dogAge,gender,dogBreed,coatLength,activityLevel,specialNeeds,briefBio,favorite) 
 VALUES ('Thor',
         'https://image.freepik.com/free-photo/german-shorthaired-pointer-dog_100493-508.jpg',
         'Adult',

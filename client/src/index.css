@@ -26,6 +26,6 @@ nav {
   background-color: #004179;
 }
 
-/* .donate {
-  background-image: url(
-} */
+ul {
+  list-style: none;
+}
