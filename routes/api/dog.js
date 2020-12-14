@@ -32,6 +32,34 @@ module.exports = function (router) {
                 res.status(500).json(err);
             });
     });
+    // Retrieve all Dogs based on filter
+    router.get("/api/dog/:dogBreed/:dogAge/:gender/:coatLength/:activityLevel/:specialNeeds", function(req, res) {
+        db.dog
+            .findAll({
+                where: {
+                    dogBreed: req.body.dogBreed,
+                    dogAge: req.body.dogAge,
+                    gender: req.body.gender,
+                    coatLength: req.body.coatLength,
+                    activityLevel: req.body.activityLevel,
+                    specialNeeds: req.body.specialNeeds
+                },
+            })
+            .then(function(dbGetDog) {
+                res.json(dbGetDog);
+            })
+            .catch(function(err) {
+                res.status(500).json(err);
+            });
+    });
+
+    // router.get('/api/dog/:dogBreed/:dogAge/:gender/:coatLength/:activityLevel/:specialNeeds', function(req, res) {
+    //     getFilterBasedValues(req.body.dogBreed, req.body.dogAge, req.body.gender, req.body.coatLength, req.body.activityLevel, req.body.specialNeeds);
+    //   });
+
+
+
+
      // Retrieve a single Dog by Id
 
      router.get("/api/dog/:id", (req, res) => {
