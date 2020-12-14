@@ -9,8 +9,9 @@ nav {
   background-color: #f0b02a;
 }
 .img-fluid{
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: auto;
+  display:block;
 }
 
 .img-circle {
@@ -20,11 +21,22 @@ nav {
   border-radius: 50%;
 }
 
+h1 { 
+  position: absolute;
+  margin: auto;
+  top: 10;
+  left:10;
+  right:0;
+  bottom:0;
+  color:#fff;
+  height:100px;; 
+  width: 1020px;
+}
+
 .btn-primary {
   background-color: white;
   color: black;
   border: 2px solid #4CAF50;
-  border-radius: 50%;
 }
 
 /* .donate {

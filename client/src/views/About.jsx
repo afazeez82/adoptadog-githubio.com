@@ -1,35 +1,36 @@
 import React from "react";
-// import "../index.css"
 
 function About() {
   return (
     <div className="about">
-      <div className="container">
-        <div className="row align-items-center my-5">
-           <div className="col-lg-7">
-            <img
-              className="img-fluid w-100 h-auto"
-              src={process.env.PUBLIC_URL +"/images/white-dog.jpg"}
-              alt="White Dog"
-            />
-          </div> 
-          <div className="col-lg-5">
-            <h1 className="font-weight-light">About</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-            <div className="col-md-4"></div>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#donate">DONATE</a>
-            <img src={process.env.PUBLIC_URL +"/images/cute-dog.jpeg"} className="img-circle" alt="..."></img>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#blog">BLOG</a>
-            <img src={process.env.PUBLIC_URL +"/images/dog2.jpg"} className="img-circle" alt="..."></img>
-          </div>
+      <div className="row">
+        <img
+          className="img-fluid w-100 h-auto"
+          src={process.env.PUBLIC_URL + "/images/dogs1.jpg"}
+          alt="White Dog"
+        />
+      </div>
+      <div className="row justify-content-md-center" style={{ backgroundColor: "#004179", height: "400px" }}>
+        <div className="col-5 m-3" style={{ backgroundColor: "#5EBAF2", height: "350px" }}>
+          <h5 className="p-4">
+            FurEver Home Rescue is a 501(c)(3) nonprofit based in
+            Minneasota and focuses on dogs who need a new home.
+
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+            </h5>
+        </div>
+        <div className="col-6">
+          <button className="btn-primary">
+            <p style={{ color: "#CACACA" }}>DONATE</p>
+            <img src={process.env.PUBLIC_URL + "/images/dog4.jpg"} className="img-circle m-4" alt="..." />
+          </button>
+          <button className="btn-primary">
+            <p style={{ color: "#CACACA" }}>BLOG</p>
+            <img src={process.env.PUBLIC_URL + "/images/dog2.jpg"} className="img-circle m-4" alt="..." />
+          </button>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
