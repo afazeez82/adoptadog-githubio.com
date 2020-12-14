@@ -1,4 +1,6 @@
-var db = require("../../models");
+
+const db = require("../../models");
+
 module.exports = function (router) {
     // Create a new Dog
     router.post("/api/dog", (req, res) => {
