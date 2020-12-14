@@ -1,13 +1,12 @@
 import React from "react";
-// import "../index.css"
 
 function About() {
   return (
     <div className="about">
       <div className="row">
         <img
-          className="w-100 h-auto"
-          src={process.env.PUBLIC_URL + "/images/fetch.jpg"}
+          className="img-fluid w-100 h-auto"
+          src={process.env.PUBLIC_URL + "/images/dogs1.jpg"}
           alt="White Dog"
         />
       </div>
@@ -21,11 +20,11 @@ function About() {
             </h5>
         </div>
         <div className="col-6">
-          <button className="homeBTN p-3">
-            <p style={{ color: "#CACACA" }}>Donate</p>
+          <button className="btn-primary p-3">
+            <p style={{ color: "#CACACA" }}>DONATE</p>
             <img src={process.env.PUBLIC_URL + "/images/dog4.jpg"} className="img-circle m-4" alt="..." />
           </button>
-          <button className="homeBTN p-3">
+          <button className="btn-primary p-3">
             <p style={{ color: "#CACACA" }}>BLOG</p>
             <img src={process.env.PUBLIC_URL + "/images/dog3.jpg"} className="img-circle m-4" alt="..." />
           </button>

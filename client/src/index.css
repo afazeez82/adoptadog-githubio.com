@@ -10,8 +10,9 @@ nav {
 }
 
 .img-fluid{
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: auto;
+  display:block;
 }
 
 .img-circle {
@@ -20,8 +21,21 @@ nav {
   border-radius: 50%;
 }
 
-.homeBTN {
+h1 { 
+  position: absolute;
+  margin: auto;
+  top: 10;
+  left:10;
+  right:0;
+  bottom:0;
+  color:#fff;
+  height:100px;; 
+  width: 1020px;
+}
+
+.btn-primary {
   border-radius: 50%;
+  color: black;
   border: none;
   background-color: #004179;
 }
