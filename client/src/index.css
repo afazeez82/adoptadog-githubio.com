@@ -8,6 +8,7 @@ body {
 nav {
   background-color: #f0b02a;
 }
+
 .img-fluid{
   width: 100%;
   height: auto;
@@ -15,9 +16,8 @@ nav {
 }
 
 .img-circle {
-  vertical-align: middle;
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
 }
 
@@ -34,9 +34,10 @@ h1 {
 }
 
 .btn-primary {
-  background-color: white;
+  border-radius: 50%;
   color: black;
-  border: 2px solid #4CAF50;
+  border: none;
+  background-color: #004179;
 }
 
 /* .donate {

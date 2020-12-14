@@ -1,7 +1,7 @@
 
 module.exports = function (sequelize, DataTypes)  {
-  const dog = sequelize.define("Dog", {
-<<<<<<< Updated upstream
+  const dog = sequelize.define("dog", {
+
     dogName: {
       type: DataTypes.STRING,
       allowNull: false
@@ -11,17 +11,6 @@ module.exports = function (sequelize, DataTypes)  {
       allowNull: false
     },
     dogAge: {
-=======
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    image: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    age: {
->>>>>>> Stashed changes
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -49,17 +38,17 @@ module.exports = function (sequelize, DataTypes)  {
       type: DataTypes.STRING,
       allowNull: false
     },
-    favorite: {
-      type: Boolean,
-      default: false
-    }
+    // favorite: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false
+    // }
   });
   dog.associate = function(models) {
     dog.belongsTo(models.adopter, {
       foreignKey: {
         allowNull: false
-      }
+      },
     });
   };
   return dog;
-};
+};   

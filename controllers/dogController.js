@@ -1,5 +1,5 @@
-const db = require('../config/db.config.js');
-const Dog = db.dogs;
+const db = require('../config/config.js');
+const Dog = db.dog;
 
 // Post a Dog
 exports.create = (req, res) => {	
@@ -21,9 +21,9 @@ exports.create = (req, res) => {
  
 // FETCH all Dogs
 exports.findAll = (req, res) => {
-	Dog.findAll().then(dogs => {
+	Dog.findAll().then(dog => {
 	  // Send all dogs to Client
-	  res.send(dogs);
+	  res.send(dog);
 	});
 };
 
