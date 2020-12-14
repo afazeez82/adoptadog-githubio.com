@@ -32,6 +32,18 @@ module.exports = function (router) {
                 res.status(500).json(err);
             });
     });
+    // Retrieve all Dogs based on filter
+    router.get("/api/dog/:breed", function(req, res) {
+        db.dog
+            .findAll({
+                where: {
+                    dogBreed: req.body.dogBreed
+                },
+            })
+            .then(function(dbGetDog) {
+                res.json(dbGetDog);
+            });
+    });
      // Retrieve a single Dog by Id
 
      router.get("/api/dog/:id", (req, res) => {
