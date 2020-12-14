@@ -1,4 +1,9 @@
 
+const router = require("express").Router();
+const dogController = require("dogController");
+
+
+
 const db = require("../../models");
 
 module.exports = function (router) {
@@ -114,5 +119,6 @@ module.exports = function (router) {
                 res.status(500).json(err);
             });
     });
+
 
 }
