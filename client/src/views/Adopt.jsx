@@ -7,20 +7,25 @@ import API from "../utils/API";
 // import HeartCheckbox from 'react-heart-checkbox';
 
 class Adopt extends Component {
+
+
   state = {
     adoptableDogs: []
   }
 
-  compontentDidMount() {
+  componentDidMount() {
+    console.log("mounting");
     this.getDogs();
   }
 
   getDogs = () => {
     API.getDogs()
-      .then(res =>
-        this.setState({
-          adoptableDogs: res.data
-        })
+      .then(res => {
+        console.log("getting dogs", res);
+        // this.setState({
+        //   adoptableDogs: res.data
+        // })
+      }
       )
       .catch(err => console.log(err));
   }
