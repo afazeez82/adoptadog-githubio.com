@@ -22,11 +22,11 @@ function About() {
         <div className="col-6">
           <button className="btn-primary p-3">
             <p style={{ color: "#CACACA" }}>DONATE</p>
-            <img src={process.env.PUBLIC_URL + "/images/dog4.jpg"} className="img-circle m-4" alt="Dog Four Picture" />
+            <img src={process.env.PUBLIC_URL + "/images/dog4.jpg"} className="img-circle m-4" alt="Dog Picture" />
           </button>
           <button className="btn-primary p-3">
             <p style={{ color: "#CACACA" }}>BLOG</p>
-            <img src={process.env.PUBLIC_URL + "/images/dog3.jpg"} className="img-circle m-4" alt="Dog Three" />
+            <img src={process.env.PUBLIC_URL + "/images/dog3.jpg"} className="img-circle m-4" alt="Dog Picture" />
           </button>
         </div>
       </div>
