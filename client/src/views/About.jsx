@@ -26,7 +26,7 @@ function About() {
           </button>
           <button className="btn-primary p-3">
             <p style={{ color: "#CACACA" }}>BLOG</p>
-            <img src={process.env.PUBLIC_URL + "/images/dog3.jpg"} className="img-circle m-4" alt="..." />
+            <img src={process.env.PUBLIC_URL + "/images/dog3.jpg"} className="img-circle m-4" alt="Dog Three" />
           </button>
         </div>
       </div>
