@@ -5,7 +5,7 @@ const adopter = require('../controller/adopter');
 const router = express.Router();
 
 
-module.exports = functions(router) {
+module.exports = function (router) {
 
 // GET api/adopters/currentUser, private, uses JWT
     router.get('/currentUser', async (req, res) => {

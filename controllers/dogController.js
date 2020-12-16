@@ -21,9 +21,9 @@ exports.create = (req, res) => {
  
 // FETCH all Dogs
 exports.findAll = (req, res) => {
-	Dog.findAll().then(dog => {
-	  // Send all dogs to Client
-	  res.send(dog);
+	Dog.findAll(req.query).then(dog => {
+	  // Json dog
+	  res.json(dog);
 	});
 };
 

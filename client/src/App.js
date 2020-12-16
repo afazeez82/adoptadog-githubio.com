@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navigation, Footer, Home, About, Adopt, Blog, Donate, Volunteer } from "./components";
+import DogScreen from "./components/dogscreen";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/blog" exact component={() => <Blog />} />
           <Route path="/donate" exact component={() => <Donate />} />
           <Route path="/getInvolved" exact component={() => <Volunteer />} />
+          <Route path="/dog/:id" component={DogScreen} />
         </Switch>
         <Footer />
       </Router>

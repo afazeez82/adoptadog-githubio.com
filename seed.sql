@@ -1,6 +1,6 @@
 USE adoptAdogDB;
 
-CREATE TABLE dog (
+CREATE TABLE dogs (
     dogName  VARCHAR(255),
     dogImage  VARCHAR(255),
     dogAge  VARCHAR(255),

@@ -1,5 +1,5 @@
 const db = require('../config/db.config.js');
-const Adopter = db.adopters;
+const Adopter = db.adopter;
 
 //POST an adoption form
 exports.create = (req, res) => {	
