@@ -16,8 +16,8 @@ nav {
 }
 
 .img-circle {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
@@ -42,4 +42,8 @@ h1 {
 
 ul {
   list-style: none;
+}
+
+footer {
+  background-color: #f0b02a;
 }

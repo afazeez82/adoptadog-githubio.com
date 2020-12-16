@@ -2,8 +2,8 @@ import React from "react";
 
 function Donate() {
     return (
-        <div className="Donate" style={{
-            backgroundImage: "url('https://pethome.hr/upload/2020/09/dogs-need-to-play_5f56183e18f4f.jpg')", height: "1200px", maxWidth: "1900px", minWidth: "1500px"
+        <div className="Donate container" style={{
+            backgroundImage: "url('https://pethome.hr/upload/2020/09/dogs-need-to-play_5f56183e18f4f.jpg')", height: "100%",
         }}>
             <div className="container">
                 <div className="row p-5">
