@@ -3,7 +3,7 @@
 // ==============================================================================
 
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define("User", {
+  const user = sequelize.define("user", {
     id: {
       autoIncrement: true,
       primaryKey: true,
@@ -19,5 +19,13 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
 
-  return User;
+  user.associate = function(models) {
+    user.belongsTo(models.dog, {
+      foreignKey: {
+        allowNull: false
+      },
+    });
+  };
+
+  return user;
 };
