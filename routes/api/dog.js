@@ -20,23 +20,25 @@ module.exports = function (router) {
             coatLength: req.body.coatLength,
             activityLevel: req.body.activityLevel,
             specialNeeds: req.body.specialNeeds,
-            briefBio: req.body.briefBio
+            briefBio: req.body.briefBio,
+            favorite: req.body.favorite,
+            createdAt: Date.now,
         })
             .then(function (dog) {
 
-                dogName: req.body.dogName,
-                dogImage: req.body.dogImage,
-                dogAge: req.body.dogAge,
-                gender: req.body.gender,
-                dogBreed: req.body.dogBreed,
-                coatLength: req.body.coatLength,
-                activityLevel: req.body.activityLevel,
-                specialNeeds: req.body.specialNeeds,
-                briefBio: req.body.briefBio,
-                favorite: req.body.favorite,
-                createdAt:Date.now,
-            })
-            .then(function(dog) {
+                // dogName: req.body.dogName,
+                // dogImage: req.body.dogImage,
+                // dogAge: req.body.dogAge,
+                // gender: req.body.gender,
+                // dogBreed: req.body.dogBreed,
+                // coatLength: req.body.coatLength,
+                // activityLevel: req.body.activityLevel,
+                // specialNeeds: req.body.specialNeeds,
+                // briefBio: req.body.briefBio,
+                // favorite: req.body.favorite,
+                // createdAt:Date.now,
+            // })
+            // .then(function(dog) {
 
                 res.json(dog);
             })
@@ -134,17 +136,7 @@ module.exports = function (router) {
         })
             .catch(function (err) {
 
-                dogName: req.body.dogName,
-                dogImage: req.body.dogImage,
-                dogAge: req.body.dogAge,
-                gender: req.body.gender,
-                dogBreed: req.body.dogBreed,
-                coatLength: req.body.coatLength,
-                activityLevel: req.body.activityLevel,
-                specialNeeds: req.body.specialNeeds,
-                briefBio: req.body.briefBio,
-                favorite: req.body.favorite,
-                updatedAt: Date.now(),
+              
             }, {
                 where: {
                     id: req.params.id
