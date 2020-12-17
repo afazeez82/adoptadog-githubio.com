@@ -38,17 +38,22 @@ module.exports = function (sequelize, DataTypes)  {
       type: DataTypes.STRING,
       allowNull: false
     },
-    // favorite: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false
-    // }
+     favorite: {
+       type: DataTypes.BOOLEAN,
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW
+    },
+  
   });
-  dog.associate = function(models) {
-    dog.belongsTo(models.adopter, {
-      foreignKey: {
-        allowNull: false
-      },
-    });
-  };
+ dog.associate = function(models) {
+    dog.hasMany(models.user, {
+ });
+   };
   return dog;
 };   

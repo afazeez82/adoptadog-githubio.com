@@ -1,10 +1,9 @@
+/* eslint-disable import/no-anonymous-default-export */
 import axios from 'axios';
 
-export default {    
-    getDogs: async function() {        
-        const response = await axios.get("http://localhost:3001/api/dog/");
-        console.log(response.data);        
-        return response.data;   
-        
+export default {
+    // Gets all books
+    getDogs: function() {
+      return axios.get("/api/dog/");
     }
-}
+}  

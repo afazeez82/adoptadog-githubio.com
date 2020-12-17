@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from 'react';
 // import data from "../data";
 // import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
@@ -6,34 +6,25 @@ import Button from 'react-bootstrap/Button';
 import API from "../utils/API";
 // import HeartCheckbox from 'react-heart-checkbox';
 
-class Adopt extends Component {
+function Adopt() {
 
+  const [dogs, adoptableDogs] = useState([]);
 
-  state = {
-    adoptableDogs: []
-  }
+  useEffect (()=> {
+    loadDogs()
+  }, [])
 
-  componentDidMount() {
-    console.log("mounting");
-    this.getDogs();
-  }
-
-  getDogs = () => {
+  function loadDogs() {
     API.getDogs()
-      .then(res => {
-        console.log("getting dogs", res);
-        // this.setState({
-        //   adoptableDogs: res.data
-        // })
-      }
+      .then(res => 
+        adoptableDogs(res.data)
       )
       .catch(err => console.log(err));
   }
 
-  render() {
     return (
       < div className="dogs row m-5 mb-5" >
-        {this.state.adoptableDogs.map(dogs =>
+        {dogs.map(dogs =>
           <Card className="col-2 offset-1 p-2 mb-5">
             <Card.Img variant="top" src={dogs.dogImage} />
             <Card.Body>
@@ -47,6 +38,5 @@ class Adopt extends Component {
           </Card>)}
       </div >)
   }
-}
 
 export default Adopt;
