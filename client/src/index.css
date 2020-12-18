@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-color: #F7D5AE;
+  overflow-x: hidden;
 }
 
 nav {
@@ -16,8 +17,8 @@ nav {
 }
 
 .img-circle {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
@@ -43,7 +44,6 @@ h1 {
 ul {
   list-style: none;
 }
-
 
 /* sidebar form  */
 .fresh-form {

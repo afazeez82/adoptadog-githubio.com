@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 // import data from "../data";
 import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import API from "../utils/API";
 // import HeartCheckbox from 'react-heart-checkbox';
 
