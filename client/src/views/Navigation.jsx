@@ -77,14 +77,14 @@ function Navigation(props) {
               </li>
 
 
-              <li
+              {/* <li
                 className={`nav-item  ${props.location.pathname === "/sidebar" ? "active" : ""
                   }`}
               >
                 <Link className="nav-link" to="/sidebar">
                   SideBar
                 </Link>
-              </li>
+              </li> */}
 
               <LoginButton />
               <LogoutButton />
