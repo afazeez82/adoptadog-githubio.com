@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function About() {
   return (
-    <div className="about">
+    <div className="about container">
       <div className="row">
         <img
           className="img-fluid w-100 h-auto"
-          src={process.env.PUBLIC_URL + "/images/dogs1.jpg"}
+          src={process.env.PUBLIC_URL + "/images/fetch.jpg"}
           alt="White Dog"
         />
       </div>
@@ -19,15 +20,15 @@ function About() {
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
             </h5>
         </div>
-        <div className="col-6">
-          <button className="btn-primary p-3">
+        <div className="row">
+          <Link to="/donate" className="p-3">
             <p style={{ color: "#CACACA" }}>DONATE</p>
             <img src={process.env.PUBLIC_URL + "/images/dog4.jpg"} className="img-circle m-4" alt="..." />
-          </button>
-          <button className="btn-primary p-3">
+          </Link>
+          <Link to="/blog" className="p-3">
             <p style={{ color: "#CACACA" }}>BLOG</p>
             <img src={process.env.PUBLIC_URL + "/images/dog3.jpg"} className="img-circle m-4" alt="..." />
-          </button>
+          </Link>
         </div>
       </div>
     </div >

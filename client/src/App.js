@@ -9,12 +9,13 @@ import ProtectedRoute from './auth/protectedRoute';
 //Redux
 import { Provider } from "react-redux";
 import store from './store';
+
 // import DogScreen from "./components/dogscreen";
 
 function App() {
   return (
     <div className="App">
-      <Provider store={ store} >
+      <Provider store={ store } >
         <div>
           <Router>
             <Navigation />
