@@ -75,17 +75,6 @@ function Navigation(props) {
                   Blog
                 </Link>
               </li>
-
-
-              {/* <li
-                className={`nav-item  ${props.location.pathname === "/sidebar" ? "active" : ""
-                  }`}
-              >
-                <Link className="nav-link" to="/sidebar">
-                  SideBar
-                </Link>
-              </li> */}
-
               <LoginButton />
               <LogoutButton />
             </ul>

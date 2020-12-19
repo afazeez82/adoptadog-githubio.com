@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import API from "../utils/API";
+import Sidebar from "./Sidebar";
 // import HeartCheckbox from 'react-heart-checkbox';
 import Sidebar from "../components/sidebar";
 
@@ -22,11 +23,21 @@ function Adopt() {
       .catch(err => console.log(err));
   }
 
+    function filterDogs(dogs) {
+      adoptableDogs(dogs);
+    }
+
+
+
+
+
+
   return (
+   
     <div className="container">
       <div className="row">
         <div className="col-2">
-          <Sidebar />
+        <Sidebar filterDogs={filterDogs}></Sidebar>
         </div>
         < div className="col-10" >
           <div className="row m-3">
