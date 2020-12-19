@@ -6,6 +6,16 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: black;
+
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
 nav {
   background-color: #f0b02a;
 }
@@ -43,6 +53,10 @@ h1 {
 
 ul {
   list-style: none;
+}
+
+.carousel {
+  color:#f0b02a;
 }
 
 /* sidebar form  */
