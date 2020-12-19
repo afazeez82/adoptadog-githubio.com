@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import API from "../utils/API";
 // import HeartCheckbox from 'react-heart-checkbox';
+import Sidebar from "../components/sidebar";
 
 function Adopt() {
 
@@ -22,9 +23,13 @@ function Adopt() {
   }
 
   return (
-    < div className="dogs row m-5 mb-5" >
+    <div>
+    <div className="col-4">
+      <Sidebar />
+    </div>
+    < div className="col-8 dogs m-5 mb-5" >
       {dogs.map(dogs =>
-        <Card className="col-2 offset-1 p-2 mb-5">
+        <Card className="col-2 p-2 mb-5">
           <Card.Img variant="top" src={dogs.dogImage} />
           <Card.Body>
             <Card.Title>{dogs.dogName}</Card.Title>
@@ -35,7 +40,9 @@ function Adopt() {
             <Link to="/DogProfile" variant="primary">Go somewhere</Link>
           </Card.Body>
         </Card>)}
-    </div >)
+    </div >
+    </div>
+    )
 }
 
 export default Adopt;
