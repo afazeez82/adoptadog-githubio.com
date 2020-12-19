@@ -1,28 +1,44 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Footer, Home, About, Adopt, Blog, Donate, Volunteer } from "./components";
-import DogProfile from "./views/DogProfileSpan"
+import { Alert, Navigation, Footer} from "./components" 
+import { Home, About, Adopt, Blog, Donate, Volunteer, DogProfile, AdoptionForm } from "./views";
+
+//auth
+import ProtectedRoute from './auth/protectedRoute';
+
+//Redux
+import { Provider } from "react-redux";
+import store from './store';
 // import DogScreen from "./components/dogscreen";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Navigation />
-        <Switch>
-          <Route path="/" exact component={() => <Home />} />
-          <Route path="/about" exact component={() => <About />} />
-          <Route path="/adopt" exact component={() => <Adopt />} />
-          <Route path="/DogProfile" exact component={() => <DogProfile />} />
-          <Route path="/blog" exact component={() => <Blog />} />
-          <Route path="/donate" exact component={() => <Donate />} />
-          <Route path="/getInvolved" exact component={() => <Volunteer />} />
-          <Route path="/dog/:id" component={DogProfile} />
-        </Switch>
-        <Footer />
-      </Router>
+      <Provider store={ store} >
+        <div>
+          <Router>
+            <Navigation />
+            <Alert />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/adopt" component={Adopt} />
+              <Route exact path="/DogProfile" component={DogProfile} />
+              <Route exact path="/blog" component={Blog} />
+              <Route exact path="/donate" component={Donate} />
+              <Route exact path="/getInvolved" component={Volunteer} />
+              <Route exact path="/dog/:id" component={DogProfile} />
+              <ProtectedRoute exact path="/adoptionForm" component={AdoptionForm} />
+            </Switch>
+            <Footer />
+          </Router>
+        </div>
+      </Provider>
     </div>
   );
 }
 
 export default App;
+
+

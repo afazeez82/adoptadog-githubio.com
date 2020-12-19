@@ -1,0 +1,30 @@
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import setAlert from '../actions/alert';
+
+
+const ProtectedRoute = ({
+  component: Component,
+  auth: { isAuthenticated},
+  ...rest
+}) => (
+  <Route
+    {...rest}
+    render={props =>
+      isAuthenticated ?  (<Redirect to="/adoptionForm" />) : 
+      setAlert('You must be logged in', 'danger')
+    }
+  />
+);
+
+ProtectedRoute.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps)(ProtectedRoute);

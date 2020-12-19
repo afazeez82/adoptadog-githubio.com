@@ -23,3 +23,11 @@
   to { transform: rotate(360deg); }
 }
 
+.alert-danger {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: var(--danger-color);
+  color: #fff;
+}
+
