@@ -59,7 +59,6 @@ function Sidebar({ filterDogs }){
 
           
           <Form formId="dog-search" onSubmit={onSubmit} >
-            hello world
            <Field type="select" aria-label="Search" name= "dogBreed" options={dogBreed } >
             Dog Breed
           </Field>

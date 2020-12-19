@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import API from "../utils/API";
 import Sidebar from "./Sidebar";
-// import HeartCheckbox from 'react-heart-checkbox';
-import Sidebar from "../components/sidebar";
+
 
 function Adopt() {
 
