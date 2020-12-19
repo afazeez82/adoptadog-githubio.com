@@ -1,99 +1,88 @@
-import React, { Component } from "react";
+import React, { component } from "react";
 import { Form, Field } from "@leveluptuts/fresh";
+import API from "../utils/API";
 
 
-const onSubmit = (data) => console.log(data);
 const dogBreed = [
-"Pointer",
-"Pug",
-"Havanese",
-"Silky Terrier",
-"Border Collie",
-"Golden Retriever",
-"Golden Doodle",
-"Maltese",
-"Shih Tzu"
-];
-const dogAge = [
-  "Adult",
-  "Senior",
-  "Young",
-  "Puppy"
-];
-const dogGender = [
-  "Male",
-  "Female",
-];
-const coatLength = [
-  "Short",
-  "Medium",
-  "Long"
-];
-const activityLevel = [
-  "Low",
-  "Normal",
-  "High"
-];
-const specialNeeds = [
-  "Yes",
-  "None"
-];
+  "---- Select Breed ----",
+  "Pointer",
+  "Pug",
+  "Havanese",
+  "Silky Terrier",
+  "Border Collie",
+  "Golden Retriever",
+  "Golden Doodle",
+  "Maltese",
+  "Shih Tzu"
+  ];
+  const dogAge = [
+    "---- Select Age ----",
+    "Adult",
+    "Senior",
+    "Young",
+    "Puppy"
+  ];
+  const gender = [
+    "---- Select gender ----",
+    "Male",
+    "Female",
+  ];
+  const coatLength = [
+    "---- Select Coat Length ----",
+    "Short",
+    "Medium",
+    "Long"
+  ];
+  const activityLevel = [
+    "---- Select Activity Level ----",
+    "Low",
+    "Normal",
+    "High"
+  ];
+  const specialNeeds = [
+    "---- Select Special Need ----",
+    "Yes",
+    "None"
+  ];
 
-class Sidebar extends Component {
-  constructor() {
-    super();
-    this.handleSubmit = this.handleSubmit.bind(this);
+function Sidebar({ filterDogs }){
 
-    this.state = {
-      newUser: {
-        breed: "",
-        age: "",
-        gender: "",
-        coatLength: "",
-        activityLevel: "",
-        specaiaNeeds: ""
-      },
-    };
+  const onSubmit = (data) => {
+    console.log(data)
+    API.searchDogs(data)
+      .then(res => {
+        filterDogs(res.data);
+      })
+      .catch(err => console.log(err))
   }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    const form = event.target;
-    const data = new FormData(form);
-
-    fetch("/api/dog", {
-      method: 'POST',
-      body: data,
-    });
-  }
-
-  render() {
         return (
 
           
-          <Form formId="dog-search" onSubmit={onSubmit}>
-            
-           <Field type="select" aria-label="Search" options={dogBreed}>
+          <Form formId="dog-search" onSubmit={onSubmit} >
+            hello world
+           <Field type="select" aria-label="Search" name= "dogBreed" options={dogBreed } >
             Dog Breed
           </Field>
-          <Field type="select" aria-label="Search" options={dogAge}>
+          <Field type="select" aria-label="Search"  name= "dogAge"options={dogAge} >
             Dog Age
           </Field>
-          <Field type="select" aria-label="Search" options={dogGender}>
+          <Field type="select" aria-label="Search"  name= "gender"options={gender} >
             Gender
           </Field>
-          <Field type="select" aria-label="Search" options={coatLength}>
+          <Field type="select" aria-label="Search"  name= "coatLength" options={coatLength} >
             Coat Length
           </Field>
-          <Field type="select" aria-label="Search" options={activityLevel}>
+          <Field type="select" aria-label="Search"  name= "activityLevel"options={activityLevel} >
             Activity Level
           </Field>
-          <Field type="select" aria-label="Search" options={specialNeeds}>
+          <Field type="select" aria-label="Search"  name= "specialNeeds"options={specialNeeds} >
             SpecialNeeds
           </Field>
         </Form>
          
         )
       }
-    }
+  
+
+    
 export default Sidebar;

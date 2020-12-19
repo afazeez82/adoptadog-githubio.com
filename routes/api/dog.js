@@ -62,14 +62,7 @@ module.exports = function (router) {
         console.log(req.query);
         db.dog.findAll({
 
-            where: {
-                dogBreed: req.query.dogBreed,
-                dogAge: req.query.dogAge,
-                gender: req.query.gender,
-                coatLength: req.query.coatLength,
-                activityLevel: req.query.activityLevel,
-                specialNeeds: req.query.specialNeeds
-            }
+            where: req.query
 
 
         }).then(function (resp) {

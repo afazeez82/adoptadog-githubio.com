@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import API from "../utils/API";
+import Sidebar from "./Sidebar";
 // import HeartCheckbox from 'react-heart-checkbox';
 
 function Adopt() {
@@ -22,8 +23,21 @@ function Adopt() {
       .catch(err => console.log(err));
   }
 
+    function filterDogs(dogs) {
+      adoptableDogs(dogs);
+    }
+
+
+
+
+
+
   return (
-    < div className="dogs row m-5 mb-5" >
+
+    <div>
+      <Sidebar filterDogs={filterDogs}></Sidebar>
+
+< div className="dogs row m-5 mb-5" >
       {dogs.map(dogs =>
         <Card className="col-2 offset-1 p-2 mb-5">
           <Card.Img variant="top" src={dogs.dogImage} />
@@ -36,7 +50,9 @@ function Adopt() {
             <Link to="/DogProfile" variant="primary">Go somewhere</Link>
           </Card.Body>
         </Card>)}
-    </div >)
+    </div >
+    </div>
+    )
 }
 
 export default Adopt;
