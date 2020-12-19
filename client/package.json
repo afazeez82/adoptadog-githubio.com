@@ -18,6 +18,7 @@
     "react-heart-checkbox": "0.0.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "uuid": "^8.3.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -48,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "redux": "^4.0.5"
   }
 }

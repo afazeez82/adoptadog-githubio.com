@@ -2,32 +2,26 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { Auth0Provider } from '@auth0/auth0-react';
-//import Auth0ProviderWithHistory from '../src/utils/history';
+import { BrowserRouter as Router } from "react-router-dom";
+import Auth0ProviderWithHistory from '../src/auth/auth0ProviderWithHistory';
 
-import reportWebVitals from './utils/reportWebVitals';
+//import reportWebVitals from './utils/reportWebVitals';
 
 //import registerServiceWorker from "./utils/registerServiceWorker";
 
-const domain = 'dev-lutymdw4.us.auth0.com';
-const clientId = 'qIWYpebqurDMzXmGh14Da9m2fw420fcr'
-;
-
 
 ReactDOM.render(
-    <Auth0Provider
-        domain = {domain}
-        clientId = {clientId}
-        redirectUri = {window.location.origin}
-    >
-        <App />
-    </Auth0Provider>,
+    <Router>
+        <Auth0ProviderWithHistory>
+            <App />
+        </Auth0ProviderWithHistory>
+    </Router>,
   
     document.getElementById('root')
 ); 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//reportWebVitals();
 
 //registerServiceWorker();
