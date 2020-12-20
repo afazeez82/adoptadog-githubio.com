@@ -18,3 +18,6 @@ class HeartCheckbox extends Component {
     );
   }
 }
+
+
+export default HeartCheckbox
