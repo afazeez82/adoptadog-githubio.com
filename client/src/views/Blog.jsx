@@ -1,5 +1,6 @@
 // import { Link } from "react-router-dom";
 // import Card from 'react-bootstrap/Card';
+import React from 'react';
 
 function Blog() {
     return (
