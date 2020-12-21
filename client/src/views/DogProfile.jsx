@@ -12,38 +12,60 @@ const DogProfile = props => {
 
   useEffect(() => {
     API.getDogById(props.match.params.id)
-      .then(res => dispatch({ type: VIEW_CURRENT_DOG, dog: res.data }))
+      .then(res => {dispatch({ type: VIEW_CURRENT_DOG, dog: res.data }); console.log(state)})
       .catch(err => console.log(err));
   }, []);
 
+//   const addFavorite = () => {
+//     dispatch({
+//       type: ADD_FAVORITE,
+//       dog: state.dogProfile
+//     });
+//   };
+
+//   const removeFavorite = () => {
+//     dispatch({
+//       type: REMOVE_FAVORITE,
+//       id: state.dogProfile.id
+//     });
+//   };
   
   return (
     <>{state.dogProfile ? (
         <Fragment>
-        <div className="dogProfile">
-<div className="card" style={{ backgroundColor: "#268E6c", height: "auto"}}>
-  <div className="col-5 m-3">
-      <Link to="/Adopt">← Back to Adoptable Dogs</Link>
-      <img src={state.dogProfile.dogImage} className="img-circle m-4" alt="..." />
-      <div className="card-body">
-          <h5 className="card-title" style={{ textAlign: "center" }}>{state.dogProfile.dogName}</h5>
-      </div>
-  </div>  
+            <div className="dogProfile">
+                <div className="card" style={{ backgroundColor: "#268E6c", height: "auto"}}>
+                    <div className="col-5 m-3">
+                        <Link to="/Adopt">← Back to Adoptable Dogs</Link>
+                        <img src={state.dogProfile.dogImage} className="img-circle m-4" alt="..." />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center" }}>{state.dogProfile.dogName}</h5>
+                            </div>
+                    </div>  
 
-  <div className="col-5 m-3">
-      <ul className="list-group list-group-flush">
-          <li className="list-group-item">{state.dogProfile.dogAge}</li>
-          <li className="list-group-item">{state.dogProfile.gender}</li>
-          <li className="list-group-item">{state.dogProfile.dogBreed}</li>
-          <li className="list-group-item">{state.dogProfile.coatLength}</li>
-          <li className="list-group-item">{state.dogProfile.activityLevel}</li>
-          <li className="list-group-item">{state.dogProfile.specialNeeds}</li>
-      </ul> 
-      <p className="card-text" style={{ textAlign: "center" }}>{state.dogProfile.briefBio}</p>
-  </div>
-  </div> 
-  </div>
-  </Fragment>
+                    <div className="col-5 m-3">
+                        <ul className="list-group list-group-flush">
+                            <li className="list-group-item">{state.dogProfile.dogAge}</li>
+                            <li className="list-group-item">{state.dogProfile.gender}</li>
+                            <li className="list-group-item">{state.dogProfile.dogBreed}</li>
+                            <li className="list-group-item">{state.dogProfile.coatLength}</li>
+                            <li className="list-group-item">{state.dogProfile.activityLevel}</li>
+                            <li className="list-group-item">{state.dogProfile.specialNeeds}</li>
+                         </ul> 
+                         <p className="card-text" style={{ textAlign: "center" }}>{state.dogProfile.briefBio}</p>
+                    </div>
+                        {/* {state.favorites.indexOf(state.dogs) !== -1 ? (
+                            <button className="btn btn-danger" onClick={removeFavorite}>
+                                Remove from Favorites!
+                            </button>
+                        ) : (
+                            // <button className="btn" onClick={addFavorite}>
+                                ❤️ Add to Favorites
+                            </button>
+                        )} */}
+                </div> 
+            </div>
+        </Fragment>
         )  : (
             <div>loading...</div>
         )} </>

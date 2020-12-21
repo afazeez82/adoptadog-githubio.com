@@ -8,7 +8,7 @@ export default {
     },
 
   // Gets the dog with the given id
-    getDog: function(id) {
+    getDogById: function(id) {
       return axios.get("http://localhost:3001/api/dog/" + id);
     },
 

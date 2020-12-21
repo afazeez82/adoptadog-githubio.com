@@ -2,7 +2,10 @@ import React, { createContext, useReducer, useContext } from "react";
 import {
     GET_DOGS,
     VIEW_CURRENT_DOG,
-    PAGE_ERROR
+    // ADD_FAVORITE,
+    // UPDATE_FAVORITES,
+    // REMOVE_FAVORITE,
+    // PAGE_ERROR
   } from "./actions";
 
 
@@ -10,27 +13,43 @@ const StoreContext = createContext();
 const { Provider } = StoreContext;
 
 const reducer = (state, action) => {
-    const { type, payload } = action;
 
-    switch (type) {
+    switch (action.type) {
         case GET_DOGS:
             return {
               ...state,
-              dogs: action.post,
+              dogs: action.dog,
               loading: false
             };
         case VIEW_CURRENT_DOG:
             return {
               ...state,
-              dogProfile: action.post,
+              dogProfile: action.dog,
               loading: false
         };
-        case PAGE_ERROR:
-            return {
-              ...state,
-              error: payload,
-              loading: false
-            };
+
+        // case ADD_FAVORITE:
+        //   return {
+        //     ...state,
+        //     favorites: [action.dog, ...state.favorites],
+        //     loading: false
+        //   };
+      
+        // case UPDATE_FAVORITES:
+        //   return {
+        //     ...state,
+        //     favorites: [...state.favorites],
+        //     loading: false
+        //   };
+      
+        // case REMOVE_FAVORITE:
+        //   return {
+        //     ...state,
+        //     favorites: state.favorites.filter((dog) => {
+        //       return dog._id !== action._id; 
+        //     })
+        //   };
+      
     
       default:
         return state;

@@ -4,11 +4,11 @@ import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const  DogCard = ({
-    dog: { _id, dogImage, dogName, dogBreed, dogAge },
+    dog: { id , dogImage, dogName, dogBreed, dogAge },
 }) => (
     <Fragment>
         <Card className="col-3 p-1 m-3 mb-5" style={{ backgroundColor: "#004179" }}>
-            <Link to={"/dog/" + _id}>
+            <Link to={"/dog/" + id}>
                 <Card.Img variant="top" src={dogImage} />
                 <Card.Body style={{ color: "#CACACA" }}>
                     <Card.Title>{dogName}</Card.Title>
@@ -21,6 +21,7 @@ const  DogCard = ({
         </Card>
     </Fragment>
 );
+
 
 DogCard.propTypes = {
     dog: PropTypes.object.isRequired,

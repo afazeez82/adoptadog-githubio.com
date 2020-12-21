@@ -45,9 +45,10 @@ function Dogs() {
 
           <div className="col-10">
             <div className="row m-5">
-              {dogs.map((dogs => (
-                <DogCard key={dogs._id} dog={dogs} />
-              )))}
+              {dogs.map((dogs => [
+                <DogCard key={dogs.id} dog={dogs} />,
+                console.log(dogs)
+              ]))}
             </div>
           </div>
         </div>
