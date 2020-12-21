@@ -7,7 +7,7 @@ return (
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={process.env.PUBLIC_URL + "/images/labPupBanner.jpg"}
+      src={process.env.PUBLIC_URL + "/images/labPupFlowers.jpg"}
       alt="First slide"
     />
     <Carousel.Caption>
@@ -18,7 +18,7 @@ return (
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={process.env.PUBLIC_URL + "/images/pittySwimBanner.jpg"}
+      src={process.env.PUBLIC_URL + "/images/pittyswim.jpg"}
       alt="Third slide"
     />
 
@@ -30,72 +30,12 @@ return (
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={process.env.PUBLIC_URL + "/images/tripodBanner.jpg"}
+      src={process.env.PUBLIC_URL + "/images/tripod.jpg"}
       alt="Third slide"
     />
 
     <Carousel.Caption>
       <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={process.env.PUBLIC_URL + "/images/whitePupBanner.jpg"}
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
-      <h3>Fourth slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={process.env.PUBLIC_URL + "/images/aussieBanner.jpg"}
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
-      <h3>Fifth slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={process.env.PUBLIC_URL + "/images/goldenBanner.jpg"}
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
-      <h3>Sixth slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={process.env.PUBLIC_URL + "/images/cattleBanner.jpg"}
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
-      <h3>Seventh slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={process.env.PUBLIC_URL + "/images/couchPupBanner.jpg"}
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
-      <h3>Sixth slide label</h3>
       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
     </Carousel.Caption>
   </Carousel.Item>
