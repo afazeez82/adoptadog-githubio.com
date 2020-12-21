@@ -17,11 +17,10 @@ const adoptableDogs = [
         briefBio: '',
         favorite: '',
 
-    },
-*/
+    },        */
     {
         dogName: 'Thor',
-        dogImage: 'https://image.freepik.com/free-photo/german-shorthaired-pointer-dog_100493-508.jpg',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/gspProfile.jpg?raw=true',
         dogAge: 'Adult',
         gender: 'Male',
         dogBreed: 'Pointer',
@@ -36,7 +35,7 @@ const adoptableDogs = [
 
     {
         dogName: 'Ralph',
-        dogImage: ' https://i.pinimg.com/originals/7b/d1/51/7bd151c9c47784ddace30feb3c3b11fe.jpg',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/pugProfile.jpg?raw=true',
         dogAge: 'Adult',
         gender: 'Male',
         dogBreed: 'Pug',
@@ -52,9 +51,9 @@ const adoptableDogs = [
 
     {
         dogName: 'Teddy',
-        dogImage: 'https://images1.americanlisted.com/nlarge/bertram-shih-tzu-senior-adoption-rescue-americanlisted_109574383.jpg',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/shihTzuProfile.jpg?raw=true',
         dogAge: 'Senior',
-        gender: 'Male',
+        gender: 'Female',
         dogBreed: 'Shih Tzu',
         coatLength: 'Medium',
         activityLevel: 'Low',
@@ -67,9 +66,9 @@ const adoptableDogs = [
 
     {
         dogName: 'Charlie',
-        dogImage: 'https://lh3.googleusercontent.com/proxy/FP_cAW24DiXsM5bPOqDTa5W99opO8Gncry4KOpxbNuvt6Q-PHjgJsySGhR1mEzd2JnSPu7rfnvbg5tbh_xMeRXGeQyo5MCL7f-2wbRmyJwMdNgWqw5Xxcv3eDeKlg9Kvt701yvnUAHglaPYfeKFPMg',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/havaneseProfile.jpg?raw=true',
         dogAge: 'Senior',
-        gender: 'Male',
+        gender: 'Female',
         dogBreed: 'Havanese',
         coatLength: 'Medium',
         activityLevel: 'Low',
@@ -82,7 +81,7 @@ const adoptableDogs = [
 
     {
         dogName: 'Buddy',
-        dogImage: 'https://barkpost.com/wp-content/uploads/2019/08/silky-terrier-favorite-dog-toys.jpg',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/silkyProfile.jpg?raw=true',
         dogAge: 'Young',
         gender: 'Male',
         dogBreed: 'Silky Terrier',
@@ -97,7 +96,7 @@ const adoptableDogs = [
 
     {
         dogName: 'JoJo',
-        dogImage: 'https://image.freepik.com/free-photo/funny-puppy-dog-border-collie-lying-couch-plaid-indoors-lovely-member-family-little-dog-home-warming-blanket-cold-fall-autumn-winter-weather-pet-animal-life-concept_80942-2550.jpg',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/bcProfile.jpg?raw=true',
         dogAge: 'Young',
         gender: 'Female',
         dogBreed: 'Border Collie',
@@ -113,7 +112,7 @@ const adoptableDogs = [
 
     {
         dogName: 'Maxie',
-        dogImage: 'https://i.pinimg.com/originals/c7/45/22/c74522d5be49609deb32bc70d4b4594c.png',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/goldenProfile.jpg?raw=true',
         dogAge: 'Adult',
         gender: 'Female',
         dogBreed: 'Golden Retriever',
@@ -128,9 +127,9 @@ const adoptableDogs = [
 
     {
         dogName: 'Bailey',
-        dogImage: 'https://i.pinimg.com/originals/38/df/d0/38dfd0aaacc5ceaa57a5bb95591d8167.jpg',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/doodlePupProfile.jpg?raw=true',
         dogAge: 'Puppy',
-        gender: 'Male',
+        gender: 'Female',
         dogBreed: 'Golden Doodle',
         coatLength: 'Short',
         activityLevel: 'High',
@@ -143,7 +142,7 @@ const adoptableDogs = [
 
     {
         dogName: 'Bella',
-        dogImage: 'https://www.aaronmaltesepuppy.com/images/672B2162-2.jpeg',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/malteseProfile.jpg?raw=true',
         dogAge: 'Senior',
         gender: 'Female',
         dogBreed: 'Maltese',
@@ -155,6 +154,84 @@ const adoptableDogs = [
 
 
     },
+    {
+        dogName: 'Herman',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/brussels.png?raw=true',
+        dogAge: 'Adult',
+        gender: 'Male',
+        dogBreed: 'Brussels Griffon',
+        coatLength: 'Medium',
+        activityLevel: 'Normal',
+        specialNeeds: 'None',
+        briefBio: '',
+        favorite: false,
+
+    },
+    {
+        dogName: 'Coach',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/cattleProfile.jpg?raw=true',
+        dogAge: 'Puppy',
+        gender: 'Male',
+        dogBreed: 'Australian Cattle Dog',
+        coatLength: 'Short',
+        activityLevel: 'High',
+        specialNeeds: 'Yes',
+        briefBio: '',
+        favorite: false,
+
+    }, 
+    {
+        dogName: 'Francine',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/couchPupProfile.jpg?raw=true',
+        dogAge: 'Senior',
+        gender: 'Female',
+        dogBreed: 'Lab Mix',
+        coatLength: 'Long',
+        activityLevel: 'Low',
+        specialNeeds: 'None',
+        briefBio: '',
+        favorite: false,
+
+    }, 
+    {
+        dogName: 'Trixie',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/labPupProfile.jpg?raw=true',
+        dogAge: 'Puppy',
+        gender: 'Female',
+        dogBreed: 'Labrador Retriever',
+        coatLength: 'Short',
+        activityLevel: 'Normal',
+        specialNeeds: 'None',
+        briefBio: '',
+        favorite: false,
+
+    }, 
+    {
+        dogName: 'Rosco',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/pittyProfile.jpg?raw=true',
+        dogAge: 'Adult',
+        gender: 'Male',
+        dogBreed: 'American Pitbull Terrier',
+        coatLength: 'Short',
+        activityLevel: 'Low',
+        specialNeeds: 'Yes',
+        briefBio: '',
+        favorite: false,
+
+    }, 
+    {
+        dogName: 'Shep',
+        dogImage: 'https://github.com/caropukenis/adoptAdogImageRepo/blob/main/tripodProfile.jpg?raw=true',
+        dogAge: 'Senior',
+        gender: 'Male',
+        dogBreed: 'German Shepherd Mix',
+        coatLength: 'Medium',
+        activityLevel: 'Normal',
+        specialNeeds: 'Yes',
+        briefBio: '',
+        favorite: false,
+
+    }, 
     
 ];
 

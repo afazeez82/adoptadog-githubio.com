@@ -8,7 +8,6 @@ body {
 
 a {
   color: black;
-
 }
 
 a:hover {
@@ -55,8 +54,8 @@ ul {
   list-style: none;
 }
 
-.carousel {
-  color:#f0b02a;
+.carousel a {
+  color: white;
 }
 
 /* sidebar form  */

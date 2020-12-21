@@ -13,38 +13,38 @@ const dogBreed = [
   "Golden Doodle",
   "Maltese",
   "Shih Tzu"
-  ];
-  const dogAge = [
-    "---- Select Age ----",
-    "Adult",
-    "Senior",
-    "Young",
-    "Puppy"
-  ];
-  const gender = [
-    "---- Select gender ----",
-    "Male",
-    "Female",
-  ];
-  const coatLength = [
-    "---- Select Coat Length ----",
-    "Short",
-    "Medium",
-    "Long"
-  ];
-  const activityLevel = [
-    "---- Select Activity Level ----",
-    "Low",
-    "Normal",
-    "High"
-  ];
-  const specialNeeds = [
-    "---- Select Special Need ----",
-    "Yes",
-    "None"
-  ];
+];
+const dogAge = [
+  "---- Select Age ----",
+  "Senior",
+  "Adult",
+  "Young",
+  "Puppy"
+];
+const gender = [
+  "---- Select gender ----",
+  "Male",
+  "Female",
+];
+const coatLength = [
+  "---- Select Coat Length ----",
+  "Short",
+  "Medium",
+  "Long"
+];
+const activityLevel = [
+  "---- Select Activity Level ----",
+  "Low",
+  "Normal",
+  "High"
+];
+const specialNeeds = [
+  "---- Select Special Need ----",
+  "Yes",
+  "None"
+];
 
-function Sidebar({ filterDogs }){
+function Sidebar({ filterDogs }) {
 
   const onSubmit = (data) => {
     console.log(data)
@@ -54,33 +54,33 @@ function Sidebar({ filterDogs }){
       })
       .catch(err => console.log(err))
   }
-        return (
+  return (
 
-          
-          <Form formId="dog-search" onSubmit={onSubmit} >
-           <Field type="select" aria-label="Search" name= "dogBreed" options={dogBreed } >
-            Dog Breed
-          </Field>
-          <Field type="select" aria-label="Search"  name= "dogAge"options={dogAge} >
-            Dog Age
-          </Field>
-          <Field type="select" aria-label="Search"  name= "gender"options={gender} >
-            Gender
-          </Field>
-          <Field type="select" aria-label="Search"  name= "coatLength" options={coatLength} >
-            Coat Length
-          </Field>
-          <Field type="select" aria-label="Search"  name= "activityLevel"options={activityLevel} >
-            Activity Level
-          </Field>
-          <Field type="select" aria-label="Search"  name= "specialNeeds"options={specialNeeds} >
-            SpecialNeeds
-          </Field>
-        </Form>
-         
-        )
-      }
-  
 
-    
+    <Form formId="dog-search" onSubmit={onSubmit} >
+      <Field type="select" aria-label="Search" name="dogBreed" options={dogBreed} >
+        Dog Breed
+          </Field>
+      <Field type="select" aria-label="Search" name="dogAge" options={dogAge} >
+        Dog Age
+          </Field>
+      <Field type="select" aria-label="Search" name="gender" options={gender} >
+        Gender
+          </Field>
+      <Field type="select" aria-label="Search" name="coatLength" options={coatLength} >
+        Coat Length
+          </Field>
+      <Field type="select" aria-label="Search" name="activityLevel" options={activityLevel} >
+        Activity Level
+          </Field>
+      <Field type="select" aria-label="Search" name="specialNeeds" options={specialNeeds} >
+        SpecialNeeds
+          </Field>
+    </Form>
+
+  )
+}
+
+
+
 export default Sidebar;
