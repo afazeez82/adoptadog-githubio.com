@@ -1,15 +1,14 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
-import AdoptButton from './AdoptButton';
 import { Link } from 'react-router-dom';
 
 const  DogCard = ({
-    dog: { dogImage, dogName, dogBreed, dogAge },
+    dog: { _id, dogImage, dogName, dogBreed, dogAge },
 }) => (
     <Fragment>
         <Card className="col-3 p-1 m-3 mb-5" style={{ backgroundColor: "#004179" }}>
-            <Link to="/DogProfile">
+            <Link to={"/dog/" + _id}>
                 <Card.Img variant="top" src={dogImage} />
                 <Card.Body style={{ color: "#CACACA" }}>
                     <Card.Title>{dogName}</Card.Title>

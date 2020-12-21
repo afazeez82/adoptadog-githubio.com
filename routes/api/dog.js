@@ -67,20 +67,20 @@ module.exports = function (router) {
 
     });
 
-    // // Retrieve a single Dog by Id
+    // Retrieve a single Dog by Id
 
-    // router.get("/api/dog/:id", (req, res) => {
-    //     db.dog.findOne({
-    //         where: {
-    //             id: req.params.id
-    //         }
-    //     }).then(function (dbGetDog) {
-    //         res.json(dbGetDog);
-    //     })
-    //         .catch(function (err) {
-    //             res.status(500).json(err);
-    //         });
-    // });
+    router.get("/api/dog/:id", (req, res) => {
+        db.dog.findOne({
+            where: {
+                id: req.params.id
+            }
+        }).then(function (dbGetDog) {
+            res.json(dbGetDog);
+        })
+            .catch(function (err) {
+                res.status(500).json(err);
+            });
+    });
 
     // // Delete a Dog with Id
     // router.delete("/api/dog/:id", (req, res) => {

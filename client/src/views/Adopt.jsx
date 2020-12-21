@@ -42,6 +42,7 @@ function Dogs() {
           <div className="col-2 mt-5">
             <Sidebar filterDogs={filterDogs}></Sidebar>
           </div>
+
           <div className="col-10">
             <div className="row m-5">
               {dogs.map((dogs => (

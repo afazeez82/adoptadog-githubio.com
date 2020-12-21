@@ -2,10 +2,16 @@
 import axios from 'axios';
 
 export default {
-    // Gets all books
+  // Gets all dogs
     getDogs: function() {
       return axios.get("http://localhost:3001/api/dog");
     },
+
+  // Gets the dog with the given id
+    getDog: function(id) {
+      return axios.get("http://localhost:3001/api/dog/" + id);
+    },
+
     searchDogs: function(filters) {
       const filterKeys = Object.keys(filters);
       const queryString = filterKeys.reduce((accum, key) => {

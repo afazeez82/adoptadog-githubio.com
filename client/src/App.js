@@ -1,24 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Alert, Navigation, Footer} from "./components" 
-import { Home, About, Adopt, Blog, Donate, Volunteer, DogProfile, AdoptionForm } from "./views";
+import { Navigation, Footer} from "./components" 
+import { Home, About, Adopt, Blog, Donate, Volunteer, DogProfile } from "./views";
 
 //auth
-import ProtectedRoute from './auth/protectedRoute';
+//import ProtectedRoute from './auth/protectedRoute';
+import { StoreProvider } from "./utils/GlobalState";
 
 //Redux
-import { Provider } from "react-redux";
-import store from './store';
+// import { Provider } from "react-redux";
+// import store from './store';
 
 // import DogScreen from "./components/dogscreen";
 
 function App() {
   return (
  //   <div className="App">
-      <Provider store={ store } >
+      <StoreProvider >
           <Router>
             <Navigation />
-            <Alert />
+            {/* <Alert /> */}
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/home" component={Home} />
@@ -28,11 +29,10 @@ function App() {
               <Route exact path="/donate" component={Donate} />
               <Route exact path="/getInvolved" component={Volunteer} />
               <Route exact path="/dog/:id" component={DogProfile} />
-              <ProtectedRoute exact path="/adoptionForm" component={AdoptionForm} />
             </Switch>
             <Footer />
           </Router>
-      </Provider>
+      </StoreProvider>
   //  </div>
   );
 }

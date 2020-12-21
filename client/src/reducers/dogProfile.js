@@ -3,7 +3,7 @@
 import {
     GET_DOGS,
     VIEW_CURRENT_DOG,
-    ADD_DOG,
+//    ADD_DOG,
 //    UPDATE_DOG,
 //    DELETE_DOG,
     PAGE_ERROR,
@@ -12,14 +12,14 @@ import {
 //    REMOVE_FAVORITE
   } from '../actions/index';
   
-  const initialState = {
-    dogs: [],
-    dogProfile: null,
-    loading: true,
-    error: {}
-  };
+  // const initialState = {
+  //   dogs: [],
+  //   dogProfile: null,
+  //   loading: true,
+  //   error: {}
+  // };
   
-  export default function(state = initialState, action) {
+  export default function(state, action) {
     const { type, payload } = action;
   
     switch (type) {
@@ -27,21 +27,19 @@ import {
         return {
           ...state,
           dogs: payload,
-          loading: false
         };
       case VIEW_CURRENT_DOG:
         return {
           ...state,
           dogProfile: payload,
-          loading: false
         };
-      case ADD_DOG:
+/*      case ADD_DOG:
         return {
           ...state,
           dogs: [payload, ...state.dogs],
           loading: false
         };
-/*      case UPDATE_DOG:
+      case UPDATE_DOG:
         return {
           ...state,
           dogs: state.dogs.map(dogProfile=>

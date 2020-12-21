@@ -2,7 +2,9 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import setAlert from '../actions/alert';
+//import setAlert from '../actions/alert';
+import { loginWithRedirect } from "@auth0/auth0-react";
+
 
 
 const ProtectedRoute = ({
@@ -10,11 +12,10 @@ const ProtectedRoute = ({
   auth: { isAuthenticated},
   ...rest
 }) => (
-  <Route
-    {...rest}
+  <Route  
     render={props =>
-      isAuthenticated ?  (<Redirect to="/adoptionForm" />) : 
-      setAlert('You must be logged in', 'danger')
+      isAuthenticated ?  (<Redirect to="/adoptionForm" />) : loginWithRedirect()
+//      setAlert('You must be logged in', 'danger')
     }
   />
 );
