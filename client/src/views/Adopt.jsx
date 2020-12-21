@@ -7,12 +7,12 @@ import DogCard from '../components/DogCard'
 import API from "../utils/API";
 import Sidebar from "../components/Sidebar";
 
+
 //REDUX CODE
 /*const Dogs = ({ getDogs, dogs }) => {
     useEffect(() => {
       getDogs();
     }, [getDogs]);
-
 */
 
 function Dogs() {
@@ -55,9 +55,11 @@ Dogs.propTypes = {
   dog: PropTypes.object.isRequired
 };
 const mapStateToProps = (state) => ({
+
   dog: state.dog
 })
 
 export default connect(mapStateToProps, { getDogs })(Dogs);
 */
 export default Dogs
+
