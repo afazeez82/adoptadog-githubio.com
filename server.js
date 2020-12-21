@@ -37,8 +37,8 @@ if (process.env.NODE_ENV === "production") {
 // const routes = require("./routes/api/adopters.js");
 // const routes = require("./routes/api/dog.js");
 
-require("./routes/api/dog.js")(app);
-require("./routes/api/htmlRoute")(app);
+require("./routes/api/dog")(app);
+//require("./routes/api/htmlRoute")(app);
 
 
 // ==============================================================================

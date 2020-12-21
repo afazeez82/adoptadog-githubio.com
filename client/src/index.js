@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { BrowserRouter as Router } from "react-router-dom";
+//import { BrowserRouter as Router } from "react-router-dom";
 import Auth0ProviderWithHistory from '../src/auth/auth0ProviderWithHistory';
 
 //import reportWebVitals from './utils/reportWebVitals';
@@ -11,12 +11,9 @@ import Auth0ProviderWithHistory from '../src/auth/auth0ProviderWithHistory';
 
 
 ReactDOM.render(
-    <Router>
         <Auth0ProviderWithHistory>
             <App />
-        </Auth0ProviderWithHistory>
-    </Router>,
-  
+        </Auth0ProviderWithHistory>,
     document.getElementById('root')
 ); 
 // If you want to start measuring performance in your app, pass a function
