@@ -1,19 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
-//import PropTypes from 'prop-types';
-//import { connect } from 'react-redux';
 import DogCard from '../components/DogCard'
-//import   { getDogs } from '../actions/dogProfiles';
-// import HeartCheckbox from 'react-heart-checkbox';
 import API from "../utils/API";
 import Sidebar from "../components/Sidebar";
-
-
-//REDUX CODE
-/*const Dogs = ({ getDogs, dogs }) => {
-    useEffect(() => {
-      getDogs();
-    }, [getDogs]);
-*/
 
 function Dogs() {
 
