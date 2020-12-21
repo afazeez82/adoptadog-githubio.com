@@ -5,15 +5,15 @@ import DogCard from '../components/DogCard'
 import   { getDogs } from '../actions/dogProfiles';
 // import HeartCheckbox from 'react-heart-checkbox';
 
-  const Dogs = ({ getDogs, dogs: { dogs } }) => {
+  const Dogs = ({ getDogs, dog: { dogs } }) => {
     useEffect(() => {
       getDogs();
     }, [getDogs]);
 
   return (
     < div className="dogs row m-5 mb-5" >
-      {dogs.map((dogs) => (
-        <DogCard key={dogs._id} dogs={dogs} />
+      {dogs.map((dog) => (
+        <DogCard key={dog._id} dogs={dog} />
       ))}
         
     </div >)
