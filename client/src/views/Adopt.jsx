@@ -19,13 +19,13 @@ function Dogs() {
 
   const [dogs, adoptableDogs] = useState([]);
 
-  useEffect (()=> {
+  useEffect(() => {
     loadDogs()
   }, [])
 
   function loadDogs() {
     API.getDogs()
-      .then(res => 
+      .then(res =>
         adoptableDogs(res.data)
       )
       .catch(err => console.log(err));
@@ -34,19 +34,25 @@ function Dogs() {
   function filterDogs(dogs) {
     adoptableDogs(dogs);
   }
-  
-    return (
-      <Fragment>
-        <div className="col-2">
-          <Sidebar filterDogs={filterDogs}></Sidebar>
+
+  return (
+    <Fragment>
+      <div className="container">
+        <div className="row">
+          <div className="col-2 mt-5">
+            <Sidebar filterDogs={filterDogs}></Sidebar>
+          </div>
+          <div className="col-10">
+            <div className="row m-5">
+              {dogs.map((dogs => (
+                <DogCard key={dogs._id} dog={dogs} />
+              )))}
+            </div>
+          </div>
         </div>
-        <div className="dogs">
-          {dogs.map((dogs => (
-            <DogCard key={dogs._id} dog={dogs} />
-          )))}
-        </div>
-      </Fragment>
-    );
+      </div>
+    </Fragment>
+  );
 }
 
 /*
@@ -61,5 +67,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(mapStateToProps, { getDogs })(Dogs);
 */
-export default Dogs
+export default Dogs;
 

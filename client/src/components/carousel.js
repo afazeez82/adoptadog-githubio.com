@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-router-dom';
 
 const Slideshow = () => {
 return (
@@ -11,8 +12,12 @@ return (
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <div className="carousel">
+      <Link to="/adopt">
+      <h3>Trixie</h3>
+      <p>Labrador Retriver - Puppy</p>
+      </Link>
+      </div>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -23,8 +28,12 @@ return (
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div className="carousel">
+      <Link to="/adopt">
+      <h3>Rosco</h3>
+      <p>American Pitbull Terrier - Adult</p>
+      </Link>
+      </div>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -35,8 +44,12 @@ return (
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    <div className="carousel">
+      <Link to="/adopt">
+      <h3>Shep</h3>
+      <p>German Shepherd - Senior - Tripod</p>
+      </Link>
+      </div>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -71,8 +84,12 @@ return (
     />
 
     <Carousel.Caption>
-      <h3>Sixth slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    <div className="carousel">
+      <Link to="/adopt">
+      <h3>Maxie</h3>
+      <p>Golden Retriver - Adult</p>
+      </Link>
+      </div>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -83,8 +100,12 @@ return (
     />
 
     <Carousel.Caption>
-      <h3>Seventh slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    <div className="carousel">
+      <Link to="/adopt">
+      <h3>Coach</h3>
+      <p>Australian Cattle Dog - Puppy</p>
+      </Link>
+      </div>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -95,8 +116,12 @@ return (
     />
 
     <Carousel.Caption>
-      <h3>Sixth slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    <div className="carousel">
+      <Link to="/adopt">
+      <h3>Francine</h3>
+      <p>Labrador Retriver Mix - Senior</p>
+      </Link>
+      </div>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

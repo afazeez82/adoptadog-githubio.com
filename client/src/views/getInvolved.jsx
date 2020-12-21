@@ -2,7 +2,7 @@ import React from "react";
 
 function Volunteer() {
     return (
-        <div className="getInvolved container">
+        <div className=" container">
             <div className="row mt-5">
                 <div className="col-lg-4">
                     <img
