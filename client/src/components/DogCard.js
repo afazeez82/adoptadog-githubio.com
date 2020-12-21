@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
 import AdoptButton from './AdoptButton'
 
-const DogCard = ({
-    dogs: { dogImage, dogName, dogBreed, dogAge },
+const  DogCard = ({
+    dog: { dogImage, dogName, dogBreed, dogAge },
 }) => (
+    <Fragment>
     <Card className="col-2 offset-1 p-2 mb-5">
         <Card.Img variant="top" src={dogImage} />
             <Card.Body>
@@ -17,10 +18,11 @@ const DogCard = ({
                 <AdoptButton />
             </Card.Body>
     </Card>
+    </Fragment>
 );
 
 DogCard.propTypes = {
-    dogs: PropTypes.object.isRequired,
+    dog: PropTypes.object.isRequired,
 };
 
 export default DogCard;

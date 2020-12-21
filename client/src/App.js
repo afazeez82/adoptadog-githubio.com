@@ -14,9 +14,8 @@ import store from './store';
 
 function App() {
   return (
-    <div className="App">
+ //   <div className="App">
       <Provider store={ store } >
-        <div>
           <Router>
             <Navigation />
             <Alert />
@@ -25,7 +24,6 @@ function App() {
               <Route exact path="/home" component={Home} />
               <Route exact path="/about" component={About} />
               <Route exact path="/adopt" component={Adopt} />
-              <Route exact path="/DogProfile" component={DogProfile} />
               <Route exact path="/blog" component={Blog} />
               <Route exact path="/donate" component={Donate} />
               <Route exact path="/getInvolved" component={Volunteer} />
@@ -34,9 +32,8 @@ function App() {
             </Switch>
             <Footer />
           </Router>
-        </div>
       </Provider>
-    </div>
+  //  </div>
   );
 }
 

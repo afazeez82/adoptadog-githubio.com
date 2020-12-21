@@ -1,28 +1,63 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { Fragment, useState, useEffect } from 'react';
+//import PropTypes from 'prop-types';
+//import { connect } from 'react-redux';
 import DogCard from '../components/DogCard'
-import   { getDogs } from '../actions/dogProfiles';
+//import   { getDogs } from '../actions/dogProfiles';
 // import HeartCheckbox from 'react-heart-checkbox';
+import API from "../utils/API";
+import Sidebar from "../components/Sidebar";
 
-  const Dogs = ({ getDogs, dogs: { dogs } }) => {
+//REDUX CODE
+/*const Dogs = ({ getDogs, dogs }) => {
     useEffect(() => {
       getDogs();
     }, [getDogs]);
 
-  return (
-    < div className="dogs row m-5 mb-5" >
-      {dogs.map((dogs) => (
-        <DogCard key={dogs._id} dogs={dogs} />
-      ))}
-        
-    </div >)
+*/
+
+function Dogs() {
+
+  const [dogs, adoptableDogs] = useState([]);
+
+  useEffect (()=> {
+    loadDogs()
+  }, [])
+
+  function loadDogs() {
+    API.getDogs()
+      .then(res => 
+        adoptableDogs(res.data)
+      )
+      .catch(err => console.log(err));
+  }
+
+  function filterDogs(dogs) {
+    adoptableDogs(dogs);
+  }
+  
+    return (
+      <Fragment>
+        <div className="col-2">
+          <Sidebar filterDogs={filterDogs}></Sidebar>
+        </div>
+        <div className="dogs">
+          {dogs.map((dogs => (
+            <DogCard key={dogs._id} dog={dogs} />
+          )))}
+        </div>
+      </Fragment>
+    );
 }
+
+/*
 Dogs.propTypes = {
   getDogs: PropTypes.func.isRequired,
-  dogs: PropTypes.object.isRequired
+  dog: PropTypes.object.isRequired
 };
 const mapStateToProps = (state) => ({
-  dogs: state.dogs
-});
+  dog: state.dog
+})
+
 export default connect(mapStateToProps, { getDogs })(Dogs);
+*/
+export default Dogs
