@@ -10,6 +10,7 @@ function Navigation(props) {
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
           <Link className="navbar-brand" to="/">
+            <img src="https://github.com/caropukenis/adoptAdogImageRepo/blob/main/vecteezy_bulldog_1200012.png?raw=true" style={{ height: "30px", margin: "10px" }}></img>
             FurEver Home Rescue
           </Link>
           <button
