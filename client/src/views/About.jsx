@@ -11,13 +11,13 @@ function About() {
           alt="White Dog"
         />
       </div>
-      <div className="row justify-content-md-center" style={{ backgroundColor: "#004179", height: "400px" }}>
-        <div className="col-5 m-3" style={{ backgroundColor: "#5EBAF2", height: "350px" }}>
-          <h5 className="p-4">
-            FurEver Home Rescue is a 501(c)(3) nonprofit based in
-            Minneasota and focuses on dogs who need a new home.
-
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+      <div className="row justify-content-md-center" style={{ backgroundColor: "#004179", height: "600px" }}>
+        <div className="col-5 m-3" style={{ backgroundColor: "#5EBAF2", height: "550px" }}>
+          <h5 className="p-4 m-4">
+            FurEver Home Rescue is a 501(c)(3) nonprofit Minnesota-based animal rescue organization which strives to prevent the unnecessary euthanasia of companion animals by finding them loving forever homes.
+            <br></br>
+            <br></br>
+            While we will rescue companion animals of all sizes, ages, breeds and conditions, FurEver Home Rescue will always maintain a focus on helping dogs that come from homes of neglet and find stive to find them forever homes, with a 0% return policy. We do this through a strong focus on training and body awareness for the dogs, helping them to make sure they are confident in them selves and any enviornment they may walk into.
             </h5>
         </div>
         <div className="row">
