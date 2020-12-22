@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
-import AuthenticationButton from './LoginButton'
 //import Auth from '../utils/auth'
+import LoginButton from './LoginButton'
+import LogoutButton from './LogoutButton'
 
 
 function Navigation(props) {
@@ -75,7 +76,9 @@ function Navigation(props) {
                   Blog
                 </Link>
               </li> */}
-              <AuthenticationButton />
+              <LoginButton />
+              <LogoutButton />
+
             </ul>
           </div>
         </div>
