@@ -22,7 +22,7 @@ Regan Murray
 Isatou Sayang
 
 
-## Table of contentss
+## Table of contents
 - [Description](#description)
 - [About](#about)
 - [Installation](#installation)
