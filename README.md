@@ -1,6 +1,11 @@
 # FurEver Home Rescue
 ## Description
 
+Thi's a full-stack application that runs React.js as front-end and Node-Express, Sequelize and MySQL as back-end. Use JawsDB for Heroku deployment.
+
+As animal lovers and pet owners ourselves, we recognize that animal rescues play a vital role in our communities, serving many roles including rescuing animals in need, providing them shelter and medical care, and finding new homes for them where they will be cared for and loved. 
+ As developers, we wanted to create a pet adoption app that would make the adoption process of rescue animals both easier and more enjoyable for adopters, fosters, and rescues alike.
+
 
 
 ## About
@@ -33,17 +38,7 @@ Open your Bash/Terminal and type the following command: git clone git@github.com
 
 ## Starting the app locally
 
-**Configure the MySQL database:**
-
-- In config/config.js - replace the development username, password, and database name to match your local MySQL user information and application database
-
-**Populating the MySQL database:**
-
- ```
-npx sequelize-cli db:seed:all
- ```
- 
- - Open the project folder in Visual Studio and install the dependencies. 
+- Open the project folder in Visual Studio and install the dependencies. 
 
 **Install the front and backend dependencies:**
 
@@ -55,6 +50,18 @@ npm install
 cd client
 npm install
  ```
+
+**Configure the MySQL database:**
+
+- In config/config.js - replace the development username, password, and database name to match your local MySQL user information and application database
+
+**Populating the MySQL database:**
+
+ ```
+npx sequelize-cli db:seed:all
+ ```
+ 
+ 
 
 Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
