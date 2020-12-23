@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "ry4qp3urscjmzfqt",
-    "password": "arpyias6ey3bzv8o",
-    "database": "sioqcaw0udqpj10f",
-    "host": "l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "password",
+    "database": "adoptAdogDB",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "port": 3306
   },
