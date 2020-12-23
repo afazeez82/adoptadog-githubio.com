@@ -40,4 +40,8 @@ Your app should now be running on <http://localhost:3000>. The Express server sh
 
 ## Demo
 
-You can see a working demo at 
+You can see a working demo at [Heroku](https://secure-thicket-27671.herokuapp.com/)
+
+![Home Rescue](client//public/images/dog_rescue.gif)
+
+
